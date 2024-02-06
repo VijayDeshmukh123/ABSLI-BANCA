@@ -13,19 +13,7 @@ import java.text.SimpleDateFormat;
 
 
 public class ExcelWriter {
-//kumar
- public static void excelWriter_kumar(String applicationNumber) {
-        try {
-            //Fetch the class and method name
-            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-            StackTraceElement callingElement = stackTraceElements[2];
-            String methodName = callingElement.getMethodName();
-            String className = callingElement.getClassName();
-            String testMethodName = "Class: " + className + ", Method: " + methodName;
 
-            String file = "src/main/java/ExcelData/Book.xlsx"; // set the file path here
-        }
- }
     public static void excelWriter(String applicationNumber) {
         try {
             //Fetch the class and method name
