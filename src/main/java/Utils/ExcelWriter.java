@@ -14,7 +14,15 @@ import java.text.SimpleDateFormat;
 
 public class ExcelWriter {
 //kumar
-
+ public static void excelWriter_Kumar(String applicationNumber) {
+        try {
+            //Fetch the class and method name
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            StackTraceElement callingElement = stackTraceElements[2];
+            String methodName = callingElement.getMethodName();
+            String className = callingElement.getClassName();
+            String testMethodName = "Class: " + className + ", Method: " + methodName;
+        }
     public static void excelWriter(String applicationNumber) {
         try {
             //Fetch the class and method name
