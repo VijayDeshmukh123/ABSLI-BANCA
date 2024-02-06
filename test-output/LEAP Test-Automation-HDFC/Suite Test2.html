@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>TestNG:  Suite Test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Suite Test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 13 19:33:06 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>110 seconds (110737 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.absli.testcases.EndtoEndProposerSame.CompletesamePSK1()'><b>CompletesamePSK1</b><br>Test class: com.absli.testcases.EndtoEndProposerSame<br>Test method: Proposer Same GMS Scenario<br>Parameters: {IspolicytermVision_Endo=YES, IsHSRiderN_AyushPlan=Hospital Care, IsPlanOptionSalaried=YES, ReasonRef=Reason Test, policytermASK=4 Years, year=1981, AddressLocation2=Indian, AddressLocation1=International, pptFMP=Single Pay, VisitDate=, IsselectN_AyushPlan=YES, IsPaymodeN_AyushPlan=YES, IsFamilyMedical=Yes, ProposerMiddleName=Suresh, IsSelectPlanOptionsPSK=YES, BDeathage=, IsPremiumAmountN_Laabh=YES, AssuredBeneOptionChild_future=Education Milestone Benefit, IsBenefitfrequencyN_Pension=YES, IsPPTOptionVisionstar=YES, premiumamountN_Laabh=50000, IsRiderAvailableVisionlifeplus=NO, AddRiderVisionlifeplus=Accidental Death Benefit Plus, PoliticalDetails=, IsADBRiderFortune=, IsHSRiderN_Pension=No, RecoveryDate=, premiumamountN_AyushPlan=300000, IFSCCode=HDFC0000277, ACIumAssuredamountPSK=550000, IsLifeStyleDetails=Yes, HCamountGMS=, paymodeVision_Endo=Semi-Annual, nriAccountType=, lastTravelled12MonthsArrivalDate=, FHealthState=Cancer, riskProfileFieldValue=, IsPaymodeAIP=YES, IsPaymodeN_Pension=YES, MHealthState=Cancer, HeightFeet=6, IsCIRiderCancer=No, IsAddBrother=No, ADMamountN_Pension=, maidenname=Test, IsPlanOptionFMP=Yes, teleNumberOfficeNri=, nriAddressType=, nomineegender=Female, pptOptionVisionlifeplus=10, IsselectVision_Endo=NO, IsIncomeBenefitCancer=NO, IsBonusUtilizationOptionVisionlifeplus=YES, premiumamountAkshaya=500000, IsAddRiderCancer=YES, ADMamountCancer=165000, rbiPermitDetail=, policytermFortune=20, underWritingClassFortune=2, FatherStatus=Living, sumAssuredamountVision_Endo=5000001, SumAssuredAmountSalaried=8000070, IsInsuPolitical=No, natureOfVisaHeld=, IsADBRiderPSK=NO, premiumamountGMS=15000, IsPremiumAmountN_AyushPlan=YES, rbiOfficeName=, nomineeshare=100, SumassuredACFChild_future=, IsAccountType=NO, isIndianOrigin=, ADBamountChild_future=, InsurancePurpose1=Protection, premiumValue=, InsurancePurpose3=Cover Outstanding Loans, InsurancePurpose2=Retirement Planning, lifeStageValue=, BenifitPayoutVisionlifeplus=Annual, CIamountGMS=180000, IsSAmultiplierN_Pension=YES, ChequeBelongtoThirdParty=, investmentGoalValue=, IsADBRiderVision_Endo=Accidental Death Benefit Plus, IsADBRiderN_AyushPlan=Accidental Death Benefit Plus, selectChequeORDemandDraft=Cheque, IsCIRiderAkshaya=No, IsPregnant=Are You Pregnant, IssmokerASK=Non smoker, IsselectAkshaya=NO, HCamountChild_future=, LifeStyleDetailsTrv=No, AddrefusedPolicy=Refused Policy, occupationOption=Service, IsselectSalaried=NO, IsIncomeBenifitPayoutFrequencyVisionlife=NO, CIamountN_Pension=110000, IsAddRiderPSK=YES, mothername=Pooja, IsFMBSstatus=Yes, premiumamountFMP=70000, IswavierofpremiumGMS=NO, IsSCRiderN_Laabh=NO, DateofArrvl=, addressType=, IsHSRiderASP=No, IsselectFMPPlan=NO, paymodeASP=Semi-Annual, transferFrequFortune=Monthly, AlcoholAddicts=No, paymodeASK=Annual, IncomeBenifitPayoutFrequencyVisionlifeplus=Annual, month=02, Weightgainlost=, AddexistingPolicy=No, IsSCRiderAIP=No, IsSCRiderAkshaya=No, teleNumberResidenceNri=, AadharCardNo=123456789, IsRiderAvailableVisionstar=YES, IspolicytermASK=YES, RideramountVisionlifeplus=500000, AlcoholAddinfo=No, ADMamountASP=165000, benefitotionN_Pension=Long Term Income, SumAssuredMultiplierN_AyushPlan=7 times, ADMamountN_Laabh=NO, IspolicytermN_AyushPlan=YES, IspolicytermASP=YES, IsSmokerSalaried=Non Smoker, IncomeEscalationRateSalaried=10, lastVisitedIndiaDate=, IsPaymodeVision_Endo=YES, durationInYrs=, PinCodeTwo=400606, IsCIRiderN_Laabh=NO, SCamountN_Pension=, paymodeVisionstar=Annual, IsHSRiderPSK=NO, GSTnumber=, SumAssuredASK=7500000, BenifitPayoutPeriodVisionlifeplus=10, CappedNintyFortune=, areaNri=, IssmokerPSK=Non smoker, ISassuredbeneoptionChild_future=YES, lastTravelled12MonthsDepartDate=, policytermN_Pension=30 Yrs, IswavierofpremiumAkshaya=No, IsSCRiderVision_Endo=No, paymodePSK=Annual, IsBenefitfrequencyN_AyushPlan=YES, benefitfreqN_Pension=Semi-Annual, IsSCRiderN_AyushPlan=Surgical Care, ChildNomineeChild_future=NO, PanNameEdit=NO, IsIncomeVarientN_Pension=YES, SCamountPSK=, IsCIRiderASP=No, IsFamilyMedicalCncr=No, IsSCRiderChild_future=NO, Providemeddetails=Family Medical Details, pinCodeNri=, IsPremiumAmountASP=YES, IswavierofpremiumN_Laabh=NO, IsPremiumAmountAkshaya=YES, IsAddRiderN_AyushPlan=NO, PlanOptionFMP=Option A, IspolicytermN_Pension=YES, incomeAdvFortune=25, IsBenifitPayoutVisionlifeplus=YES, ADMamountAkshaya=165000, BrotherStatus=, IsFamilyMedicalCD=No, FDeathage=, TypeOfOrganisation=Trust, IswavierofpremiumN_AyushPlan=Waiver Of Premium, ProposerInsuredSame=YES, IspolicytermFortune=YES, IsAddRiderGMS=YES, SumAssuredref=1450000, PolicyTermFMP=6, IspolicytermAkshaya=YES, HCamountCancer=, SelectRelationECCD=, paymodeChild_future=Semi-Annual, MentionYears=, IsselectN_Pension=NO, HCamountAIP=, IsCIRiderPSK=Critical Illness, ADMamountFortune=, addressThree=abcd, IsPPTOptionVisionlifeplus=YES, AFWcurrentsymptoms=, HCamountVision_Endo=, IsPaymodeGMS=YES, InsurerName=, pptVision_Endo=7, paymodeFortune=Annual, IsNRI=YES, BAge=, protectorFortune=, PlanOptionVisionstarv=, IsUnderWritingClassFortune=YES, IsPermanentAddressSame=, AFWLCyear=, IsPPTOptionAkshaya=YES, Hazardactivity=, EditAddress=NO, MAge=46, IsBenefitfrequencyAkshaya=YES, premiumamountAIP=500000, IswavierofpremiumPSK=NO, SCamountASP=, IsselectGMSPlan=NO, ADBamountGMS=, purposeOfStayAbroad=, BDeathcause=, IsBenefitOptionN_Pension=YES, IsselectVisionlifeplus=NO, BHealthState=, IsSumAssuredVisionlifeVisionlife=, TypeOfAlcohal=, ChildAgeChild_future=, specificReasonFNIO_PIO=, IsCoviddetailsHomeQ=No, IsPremiumAmountAIP=YES, IsPPTOptionASP=YES, IswavierofpremiumChild_future=NO, AddRiderVisionlife=Accidental Death Benefit Plus, intendedDurationYear=, IsPPTOptionASK=YES, Isweightgainlost=No, paymodeN_AyushPlan=Annual, last12MonthCity=, HeightInch=2, AFWLCmonth=, IsADDRiderChild_future=NO, SCamountN_Laabh=NO, IsFamilyMedicalDiab=No, IsBenifitOptionVisionlife=NO, IsFamilyMedicalHA=No, IswavierofpremiumFortune=, IsFamilyMedicalHD=Hereditary disorder, passportNumber=, IncomeBenefitPeriodSalaried=15, SisterStatus=, IsBenefitOptionAkshaya=YES, CDDIFSCcode=KKBK0000631, paymodeVisionlife=Semi-Annual, City=, MDeathcause=, CDDMonth=10, IsCoviddetailsAsymptomatic=No, IncomeVariantN_Pension=Level Income with Enhanced Lumpsum Benefit, valueFundFortune=, paymodeN_Pension=Semi-Annual, IsPremiumAmountFortune=YES, IsSCRiderGMS=NO, ADMamountVision_Endo=165000, ADDMamountGMS=, lastTravelled12MonthsVisaType=, NameOfEmployer=Invera, IsOtherSymptoms=No, AlcoholAdvise=No, policytermVision_Endo=20, IsPPTOptionPSK=YES, IsselectPSK=NO, IsADBRiderGMS=NO, SAAmount=, selectPIO_OCICard=, builderFortune=, IsRiderAvailableVisionlife=NO, pptFortune=10, IsPaymodeFortune=YES, PaymentType=RTGS, IsPPTOptionN_Pension=YES, placeOfSigningApplication=, IsIncomeVarientN_AyushPlan=YES, IsselectVisionlife=NO, enhanceFortune=, IsCIRiderN_Pension=Critical Illness, DiagnosisDate=, IsCIRiderN_AyushPlan=Critical Illness, nomineeFirstName=Test, studentNatureOfStayAbroad=, AccountType=current, IsTreatmentTaken=Yes, bonusUtilizationOptionVisionlifeplus=Cash Value of Paid Up Additions, ChequeDDNo=12345678901234, fatherSpouse=Atul, IspolicytermAIP=YES, AssuredBeneTermChild_future=18, StateAddress=New York, ADMamountAIP=165000, IsFamilyMedicalMHBS=No, SumAssuredMultiplierN_Pension=10 times, IsAddRiderFortune=YES, IsADBRiderN_Pension=No, DefermentPeriodN_AyushPlan=0 year, SpecifyReason=, premiumamountN_Pension=500000, datePR=, CIamountAkshaya=, SumAssuredAmountVisionlife=1000001, OptionGMS=Option 2, IsPolicyTermPSK=YES, IsFamilyMedicaldetails=Yes, IsBenefitOptionN_AyushPlan=YES, IsSumAssuredVision_Endo=YES, CIamountVision_Endo=, IsFamilyMedicalKS=No, policytermAkshaya=To Age 85, IsPremiumVisionlifeplus=Yes, IsBenifitPayoutPeriodVisionlife=NO, ResidenceNumber=0258147853, ABGEmployeeDscountVisionlife=, pptASP=, IsAddRiderAIP=YES, pptASK=Regular Pay, IsADBRiderAkshaya=Accidental Death Benefit Plus, pptAkshaya=8 years, benefitotionVision_Endo=A, PlanBasedOnChild_future=Premium, PlanOptionSalaried=Option 1 - Life Cover, AccountNo=50100126088575, SHealthState=, MDeathage=, AddRiderVisionstar=Accidental Death Benefit Plus, SCamountAkshaya=, pptN_Laabh=10 years, IsselectASP=NO, IsselectVisionstar=NO, ProposerMobileNumber=9.876543211E9, CIamountASP=, ADMamountN_AyushPlan=120000, IsSCRiderPSK=NO, addressOne=abced, IsAddRiderAkshaya=YES, CIamountN_Laabh=NO, address3Nri=, IsselectASK=YES, noofyear=, benefitfreqAkshaya=Semi-Annual, IsSumAssuredPSK=YES, stateNri=, HazardActivityBy=, IsBenefitOptionVision_Endo=YES, IsPolicyTermCancer=YES, nextTravelled12MonthsDepartDate=, IsFamilyMedicalHBP=No, PreferredDrawDate=On Premium Due Date, MarraigeBeneTermChild_future=18, AddressFour=Test, nriMicrCode=, addressTwo=abcd, IsDefermenntPeriodN_AyushPlan=YES, travelledOverLast12Months=, IsHSRiderAkshaya=No, IsHSRiderGMS=NO, pResidence=, relationship=Mother, address2Nri=, Designation=Tester, PolicyType=Life, SCamountVision_Endo=, paymodeAIP=Semi-Annual, Addinfo=, SCamountN_AyushPlan=160000, SumAssured=, SCamountAIP=, policytermN_Laabh=25 years, IsselectFortune=NO, IsAddRiderChild_future=YES, IsADBRiderChild_future=NO, IsHSRiderN_Laabh=NO, stayAbroadSpecificReason=, CIamountCancer=, IsABGEmployeeVisionlife=, SelectPlan=ABSLI Nishchit Aayush Plan, IsBenefitOptionAIP=YES, Frequency=, HCamountASP=, multiplierFortune=25, termCancer=9, IsselectCancer=NO, nomineeLastName=Demo, IsPlanOptionCancer=NO, IsPaymodeAkshaya=YES, premiumamountASP=50000, CDDday=18, IsPremiumAmountGMS=YES, creatorFundFortune=, AFWdetails=, NameOfEmployerSalaried=, AFWdoctordetails=, IswavierofpremiumASP=No, IsPPTOptionVision_Endo=YES, IsDisorder=No, IsAddRiderN_Laabh=NO, IsBenifitOptionVisionlifeplus=YES, IsCoviddetails=No, paymodeGMS=Semi-Annual, benefitfreqN_Laabh=Semi-Annual, Advicetostop=, benefitotionN_AyushPlan=Long Term Income, HCamountPSK=, Next12MonthCity=, IsSCRiderCancer=No, PolicytermSalaried=11, IsPaymodeCancer=NO, weight=41, AFWDDmonth=, IsPaymodePSK=YES, ADDMamountChild_future=, premiumamountFortune=130000, IsPaymodeVisionstar=YES, IsEnterManual=YES, IsPlanOptionN_Laabh=Yes, PreferredLang=Hindi, countryTravelledNext12Months=, IsPaymodeN_Laabh=YES, IswavierofpremiumCancer=No, Visatype=, IsPremiumAmountFMP=NO, IsPaymodeASP=YES, SourceOfFunds=8th, pptPSK=Single Pay, IsOptionGMS=YES, natureOfStayFNIO_PIO=, IsPanAvailabel=NO, paymodeSalaried=Annual, IsPaymodeASK=YES, travelledOverNext12Months=, CityAddress=New York, CDDYear=2023, IsAreYouRegisterPerson=No, AFWLCday=, IsHospitalization=No, intendedDurationMonth=, paymodeN_Laabh=Semi-Annual, IsAadhaarCard=NO, IsADBRiderAIP=Accidental Death Benefit Plus, FNIOPIOButton=, IsCIRiderGMS=Critical Illness, PolicyTermPSK=6, HCamountN_Laabh=NO, assetFortune=, IsPPTASP=, maximiserFortune=25, IsAddSister=No, nextTravelled12MonthsVisaType=, IsADDRiderPSK=NO, SumAssuredAmountVisionstar=8000070, AlternateNumber=9889655632, IsPPTOptionN_AyushPlan=YES, ProposerGender=Male, BenifitOptionVisionlifeplus=Short Term Income, HCamountAkshaya=, CIamountPSK=180000, LifeStyleDetailsTN=No, liquidPlusFortune=, IsAbsentFromWork=No, FAge=56, IsADBRiderN_Laabh=NO, AFWDDday=, address1Nri=, NRICountry=American Samoa, paymodeAkshaya=Semi-Annual, SumAssuredPSK=5500000, policytermN_AyushPlan=25 Yrs, planOptionPSK=Level Cover Option, IsSCRiderN_Pension=No, LifeStyleDetailsA=No, IsCoviddetailsHospitalized=No, PlanOptionASP=, IsPPTOptionN_Laabh=YES, MarraigeMultipleChild_future=150%, IsADBRiderCancer=Accidental Death Benefit Plus, providePaymentDetail=, pptOptionVisionlife=21, PolicyTermASP=, benefitperiodAIP=25, PlanOptionCancer=Level Sum Assured, purposeOfStayFNIO_PIO=, durationInMonths=, IsAddRiderASP=YES, ProposerLastName=Singh, IsSAmultiplierN_AyushPlan=YES, ProposerSalutation=Mr., ProposerDOB=26082001, ProposerPanNumber=MKSPS4374P, ADDMamountPSK=, policytermAIP=6 Yrs, DefermentPeriodN_Pension=1 years, IsGynaecological=Gynaecological Problem, BenifitPayoutPeriodVisionlife=20, pinCode=783335, natureofbusiness=Testing, Country=, IsPolicyTermSalaried=YES, pptN_AyushPlan=6 Yrs, IsPremiumAmountN_Pension=YES, LifeStyleDetailsN=gfdtyfy, IsFamilyMedicalPyr=No, pptChild_future=7, AFWDDyear=, rbiPermitNumber=, IsselectN_Laabh=NO, ProposerEmailId=pavan.raut1@adityabirlacapital.com, IsselectAIPPlan=NO, benefitotionAIP=Income Only Benefit, IsPPTOptionVisionlife=YES, benefitfreqN_AyushPlan=Annual, pptAIP=6 Yrs, IswavierofpremiumVision_Endo=No, IsAddRiderVision_Endo=NO, SDeathcause=, pptN_Pension=8 Yrs, IsHSRiderAIP=No, SCamountChild_future=, ISPlanBasedOnChild_future=YES, nriPaymentDetails=, IsIncomeBenifitPayoutFrequencyVisionlifeplus=NO, ProvideDetails=, IsCIRiderChild_future=Critical Illness, IsHSRiderChild_future=NO, IsPlanOptionVisionstar=YES, magnifierFortune=, IsBenefitfrequencyN_Laabh=NO, RideramountVisionlife=500000, IsPPTOptionFortune=YES, assureFundFortune=, IsADDRiderGMS=NO, LifeStyleDetailsHZ=No, cityNri=, IsPaymodeVisionlife=YES, SCamountGMS=, nextTravelled12MonthsArrivalDate=, DepositChequeBranch=, CIamountAIP=, IspolicytermN_Laabh=YES, IsPPTOptionAIP=YES, VisitYear=, pureEquityFortune=, IsHSRiderCancer=No, HCamounty=, IswavierofpremiumN_Pension=, IsBenefitPeriodAIP=YES, InsurerBirthPlace=India, countryTravelledLast12Months=, DateofDept=, IsInvestMentOptionFortune=YES, HCamountN_Pension=, benefitotionAkshaya=Whole Life Income, IsPaymodeSalaried=YES, MotherStatus=Living, SAge=, SDeathage=, FDeathcause=, IsHaveEIA=Yes, CIamountChild_future=180000, Hospital=, IsSmokingStatusPSK=YES, day=11, PlanOptionN_Laabh=Option 3 - Moneyback Option, superTwentyFortune=25, InsurerNameRef=Bajaj Allianz Life, VisitMonth=, IsCIRiderAIP=No, PlanSelectionJourney=Recommend Plans, PremiumAmountVisionlifeplus=70000, BenifitOptionVisionlife=Income Only Benefit, IsFamilyMedicalStroke=No, investMentOptionFortune=Systematic Transfer, qualification=Graduate, IsPPTOptionFMP=Yes, benefitfreqAIP=Semi-Annual, PaymentMethod=NACH/Direct Debit, SCamountCancer=, IsBenefitfrequencyAIP=YES, IsAilments=No, pptOptionVisionstar=5, SPCode=A01193, CIamountN_AyushPlan=160000, IsHSRiderVision_Endo=No, paymodeVisionlifeplus=Semi-Annual, ProposerName=Harsh, IsPolicyTermFMP=Yes, IsSCRiderASP=No, IsSmokingStatusASK=YES, IsSpouseHealth=No, haveNriAccount=, Reason=, IsBenifitPayoutPeriodVisionlifeplus=YES, MarraigeAssuredAgeChild_future=, IsselectChild_future=NO, RideramountVisionstar=500000, exchangeFacility=, IncomeBenifitPayoutFrequencyVisionlife=Annual, IswavierofpremiumAIP=No, mnuFortune=, Tobaccotype=, IsAddRiderN_Pension=YES, Insumarital=Married, IsADBRiderASP=, quantity=, IsCIRiderVision_Endo=No, ADBamountPSK=, IncomeVariantN_AyushPlan=Level Income with Lumpsum Benefit, Quantity=, TypeOfNRI=FNIO, NoofWeeeks=1, AddExistingPolicies=, nameofbusiness=Automation, MonthDuration=, IsACIPSK=NO, IsSumAssuredASK=YES, IsPPTOptionSalaried=YES, pptOptionSalaried=5, PanDOBEdit=NO, IsPaymodeVisionlifeplus=YES, IsDefermenntPeriodN_Pension=YES, paymodeCancer=Semi-Annual, PreferredIR=, ModeofPaymentECCD=, EduBenePeriodChild_future=6}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;payment-cycle-text&apos;)]&quot;}
+  (Session info: chrome=119.0.6045.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eb44bdce5fdc7737f7db2b30c17c0e65, findElement {using=xpath, value=//div[contains(@class,&apos;payment-cycle-text&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\COMUNU~1.COM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61667}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61667/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb44bdce5fdc7737f7db2b30c17c0e65
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at Utils.ViewQuoteFactoryN_Ayush.ViewPageNischitAyush(ViewQuoteFactoryN_Ayush.java:195)
+	at com.absli.testcases.EndtoEndProposerSame.CompletesamePSK1(EndtoEndProposerSame.java:148)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1092893651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1092893651'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;payment-cycle-text&apos;)]&quot;}
+  (Session info: chrome=119.0.6045.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eb44bdce5fdc7737f7db2b30c17c0e65, findElement {using=xpath, value=//div[contains(@class,&apos;payment-cycle-text&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\COMUNU~1.COM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61667}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61667/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb44bdce5fdc7737f7db2b30c17c0e65
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at Utils.ViewQuoteFactoryN_Ayush.ViewPageNischitAyush(ViewQuoteFactoryN_Ayush.java:195)
+	at com.absli.testcases.EndtoEndProposerSame.CompletesamePSK1(EndtoEndProposerSame.java:148)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>80</td>
+<td>com.absli.testcases.EndtoEndProposerSame@275fe372</td></tr>
+</table><p>
+</body>
+</html>

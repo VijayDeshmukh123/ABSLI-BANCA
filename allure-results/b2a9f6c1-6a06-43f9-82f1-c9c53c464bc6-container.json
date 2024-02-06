@@ -1,0 +1,1 @@
+{"uuid":"b2a9f6c1-6a06-43f9-82f1-c9c53c464bc6","name":"com.absli.testcases.EndtoEndProposerSame","children":["286d448b-c46c-4181-bfc3-85542c4b0776"],"befores":[{"name":"preSetup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1705128071632,"stop":1705128095964}],"afters":[],"start":1705128071593,"stop":1705128365134}

@@ -1,0 +1,1 @@
+{"uuid":"0606aebd-769a-421a-b3be-d2eb1795d59e","name":"com.absli.base.TestBase.setUp","children":["d18cb112-9ef4-4204-bcb4-b2fb63026abd"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1702448939695,"stop":1702448939944}],"afters":[],"start":1702448939695,"stop":1702448939944}

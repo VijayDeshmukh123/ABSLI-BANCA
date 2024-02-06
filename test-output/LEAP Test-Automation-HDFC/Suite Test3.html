@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>TestNG:  Suite Test3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Suite Test3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 09 10:29:22 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>374 seconds (374876 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.absli.testcases.EndtoEndProposerSame.CompletesamePSK2()'><b>CompletesamePSK2</b><br>Test class: com.absli.testcases.EndtoEndProposerSame<br>Test method: Proposer Same GMS Scenario<br>Parameters: {IspolicytermVision_Endo=YES, IsHSRiderN_AyushPlan=Hospital Care, IsPlanOptionSalaried=YES, ReasonRef=, policytermASK=5 Years, year=1982, AddressLocation2=Indian, AddressLocation1=Indian, pptFMP=Single Pay, CommLandmark=, VisitDate=11, IsselectN_AyushPlan=YES, IsPaymodeN_AyushPlan=YES, IsFamilyMedical=Yes, ProposerMiddleName=Suresh, IsSelectPlanOptionsPSK=YES, BDeathage=, IsPremiumAmountN_Laabh=YES, AssuredBeneOptionChild_future=Education Milestone Benefit, IsBenefitfrequencyN_Pension=YES, IsPPTOptionVisionstar=YES, premiumamountN_Laabh=50000, IsRiderAvailableVisionlifeplus=NO, AddRiderVisionlifeplus=Accidental Death Benefit Plus, PoliticalDetails=Political Demo, IsADBRiderFortune=, IsHSRiderN_Pension=No, RecoveryDate=10102022, premiumamountN_AyushPlan=300000, IFSCCode=HDFC0000276, ACIumAssuredamountPSK=600000, IsLifeStyleDetails=Yes, HCamountGMS=, paymodeVision_Endo=Quarterly, nriAccountType=, lastTravelled12MonthsArrivalDate=, IFSCcode=0000635, FHealthState=Diabetes Mellitus, riskProfileFieldValue=, IsPaymodeAIP=YES, IsPaymodeN_Pension=YES, MHealthState=Diabetes Mellitus, HeightFeet=7, IsCIRiderCancer=Critical Illness, IsAddBrother=Yes, ADMamountN_Pension=, sourceFund=Others, maidenname=Test, IsPlanOptionFMP=Yes, teleNumberOfficeNri=, nriAddressType=, nomineegender=Transgender, pptOptionVisionlifeplus=10, IsselectVision_Endo=NO, IsIncomeBenefitCancer=NO, IsBonusUtilizationOptionVisionlifeplus=, premiumamountAkshaya=600000, IsAddRiderCancer=YES, ADMamountCancer=, rbiPermitDetail=, policytermFortune=25, underWritingClassFortune=3, CommAddress3=, PinCode=, FatherStatus=Living, sumAssuredamountVision_Endo=5000002, SumAssuredAmountSalaried=8000002, IsInsuPolitical=Yes, natureOfVisaHeld=, IsADBRiderPSK=NO, premiumamountGMS=45000, IsPremiumAmountN_AyushPlan=YES, rbiOfficeName=, nomineeshare=100, SumassuredACFChild_future=, isIndianOrigin=, ADBamountChild_future=, InsurancePurpose1=Savings, premiumValue=, InsurancePurpose3=Wealth Creation, InsurancePurpose2=Legacy Planning, lifeStageValue=, BenifitPayoutVisionlifeplus=, CIamountGMS=, IsSAmultiplierN_Pension=YES, investmentGoalValue=, IsADBRiderVision_Endo=No, IsADBRiderN_AyushPlan=Accidental Death Benefit Plus, IsCIRiderAkshaya=Critical Illness, IsPregnant=Are You Pregnant, IssmokerASK=smoker, IsselectAkshaya=NO, HCamountChild_future=, LifeStyleDetailsTrv=Travel, AddrefusedPolicy=No, occupationOption=, IsselectSalaried=NO, IsIncomeBenifitPayoutFrequencyVisionlife=NO, CIamountN_Pension=, IsAddRiderPSK=YES, mothername=Pooja, IsFMBSstatus=Yes, premiumamountFMP=80000, IswavierofpremiumGMS=NO, IsSCRiderN_Laabh=NO, DateofArrvl=10052025, addressType=Residential/Business Address, IsHSRiderASP=No, preferredDrawDate=1st, IsselectFMPPlan=NO, paymodeASP=Quarterly, transferFrequFortune=, AlcoholAddicts=Yes, paymodeASK=Semi-Annual, IncomeBenifitPayoutFrequencyVisionlifeplus=Annual, month=03, Weightgainlost=7, AddexistingPolicy=Existing Policy, IsSCRiderAIP=No, IsSCRiderAkshaya=No, teleNumberResidenceNri=, AadharCardNo=123456789, IsRiderAvailableVisionstar=YES, IspolicytermASK=YES, RideramountVisionlifeplus=500000, AlcoholAddinfo=Yes, ADMamountASP=, benefitotionN_Pension=Long Term Income, SumAssuredMultiplierN_AyushPlan=7 times, ADMamountN_Laabh=NO, IspolicytermN_AyushPlan=YES, IspolicytermASP=YES, IsSmokerSalaried=Smoker, IncomeEscalationRateSalaried=5, lastVisitedIndiaDate=, IsPaymodeVision_Endo=YES, durationInYrs=, PinCodeTwo=400606, IsCIRiderN_Laabh=NO, SCamountN_Pension=140000, paymodeVisionstar=Semi-Annual, IsHSRiderPSK=NO, GSTnumber=27AAAAP0267H2ZN, SumAssuredASK=10000000, BenifitPayoutPeriodVisionlifeplus=, CappedNintyFortune=, areaNri=, IssmokerPSK=smoker, ISassuredbeneoptionChild_future=YES, lastTravelled12MonthsDepartDate=, policytermN_Pension=35 Yrs, IswavierofpremiumAkshaya=No, IsSCRiderVision_Endo=No, paymodePSK=Quarterly, IsBenefitfrequencyN_AyushPlan=YES, benefitfreqN_Pension=Quarterly, IsSCRiderN_AyushPlan=Surgical Care, ChildNomineeChild_future=, PanNameEdit=NO, IsIncomeVarientN_Pension=YES, SCamountPSK=200000, IsCIRiderASP=Critical Illness, IsFamilyMedicalCncr=No, IsSCRiderChild_future=Surgical Care, AccountNumber=, Providemeddetails=Family Medical Details, pinCodeNri=, IsPremiumAmountASP=YES, IswavierofpremiumN_Laabh=NO, IsPremiumAmountAkshaya=YES, IsAddRiderN_AyushPlan=NO, PlanOptionFMP=Option B, IspolicytermN_Pension=YES, incomeAdvFortune=, IsBenifitPayoutVisionlifeplus=, ADMamountAkshaya=, BrotherStatus=Living, IsFamilyMedicalCD=Chronic disorder, FDeathage=, TypeOfOrganisation=Proprietorship, IswavierofpremiumN_AyushPlan=, ProposerInsuredSame=YES, IspolicytermFortune=YES, IsAddRiderGMS=YES, SumAssuredref=, PolicyTermFMP=7, IspolicytermAkshaya=YES, HCamountCancer=, SelectRelationECCD=Parent, paymodeChild_future=Quarterly, MentionYears=3, IsselectN_Pension=NO, HCamountAIP=, Single Premium=, IsCIRiderPSK=NO, ADMamountFortune=, addressThree=abcd, IsPPTOptionVisionlifeplus=YES, AFWcurrentsymptoms=Current Symptoms, HCamountVision_Endo=, IsPaymodeGMS=YES, InsurerName=LIC, pptVision_Endo=10, paymodeFortune=Monthly, IsNRI=NO, BAge=42, protectorFortune=, PlanOptionVisionstarv=, IsUnderWritingClassFortune=YES, IsPermanentAddressSame=NO, AFWLCyear=2019, IsPPTOptionAkshaya=YES, Hazardactivity=Profession, EditAddress=YES, MAge=47, IsBenefitfrequencyAkshaya=YES, premiumamountAIP=600000, IswavierofpremiumPSK=NO, SCamountASP=, IsselectGMSPlan=NO, ADBamountGMS=, purposeOfStayAbroad=, BDeathcause=, IsBenefitOptionN_Pension=YES, IsselectVisionlifeplus=NO, BHealthState=Cancer, IsSumAssuredVisionlifeVisionlife=, TypeOfAlcohal=Wine, ChildAgeChild_future=, specificReasonFNIO_PIO=, IsCoviddetailsHomeQ=Yes, IsPremiumAmountAIP=YES, IsPPTOptionASP=YES, IswavierofpremiumChild_future=NO, AddRiderVisionlife=Accidental Death Benefit Plus, intendedDurationYear=, IsPPTOptionASK=YES, Isweightgainlost=Yes, paymodeN_AyushPlan=Annual, last12MonthCity=, HeightInch=3, AFWLCmonth=11, IsADDRiderChild_future=NO, SCamountN_Laabh=NO, IsFamilyMedicalDiab=No, IsBenifitOptionVisionlife=NO, IsFamilyMedicalHA=No, IswavierofpremiumFortune=Waiver Of Premium, IsFamilyMedicalHD=No, passportNumber=, IncomeBenefitPeriodSalaried=20, SisterStatus=Living, IsBenefitOptionAkshaya=YES, paymodeVisionlife=Quarterly, City=Test, MDeathcause=, IsCoviddetailsAsymptomatic=Yes, IncomeVariantN_Pension=Increasing Income with Lumpsum Benefit, valueFundFortune=, paymodeN_Pension=Quarterly, IsPremiumAmountFortune=YES, IsSCRiderGMS=Surgical Care, ADMamountVision_Endo=, ADDMamountGMS=, lastTravelled12MonthsVisaType=, NameOfEmployer=Invera, IsOtherSymptoms=Other symptoms, AlcoholAdvise=Yes, policytermVision_Endo=20, IsPPTOptionPSK=YES, IsselectPSK=NO, IsADBRiderGMS=NO, SAAmount=, selectPIO_OCICard=, builderFortune=, IsRiderAvailableVisionlife=NO, pptFortune=15, IsPaymodeFortune=YES, PaymentType=Debit Card, IsPPTOptionN_Pension=YES, placeOfSigningApplication=, IsIncomeVarientN_AyushPlan=YES, IsselectVisionlife=NO, enhanceFortune=, TypeAccount=, IsCIRiderN_Pension=No, DiagnosisDate=10102021, IsCIRiderN_AyushPlan=Critical Illness, nomineeFirstName=Test, studentNatureOfStayAbroad=, AccountType=, IsTreatmentTaken=Yes, bonusUtilizationOptionVisionlifeplus=, fatherSpouse=Atul, IspolicytermAIP=YES, AssuredBeneTermChild_future=21, StateAddress=New York, ADMamountAIP=, IsFamilyMedicalMHBS=No, SumAssuredMultiplierN_Pension=7 times, IsAddRiderFortune=YES, IsADBRiderN_Pension=No, DefermentPeriodN_AyushPlan=0 year, SpecifyReason=Stop Nicotine, premiumamountN_Pension=600000, datePR=, CIamountAkshaya=170000, SumAssuredAmountVisionlife=1000002, OptionGMS=Option 3, IsPolicyTermPSK=YES, IsFamilyMedicaldetails=Yes, IsBenefitOptionN_AyushPlan=YES, IsSumAssuredVision_Endo=YES, CIamountVision_Endo=170000, IsFamilyMedicalKS=No, policytermAkshaya=30, IsPremiumVisionlifeplus=Yes, IsBenifitPayoutPeriodVisionlife=NO, IfPermantAddress=, ResidenceNumber=0258147854, ABGEmployeeDscountVisionlife=, pptASP=5, IsAddRiderAIP=YES, pptASK=Regular Pay, IsADBRiderAkshaya=No, pptAkshaya=10 years, benefitotionVision_Endo=A, PlanBasedOnChild_future=, PlanOptionSalaried=Option 3 - Fixed Income Cover, AccountNo=50100126088575, SHealthState=Cancer, MDeathage=, AddRiderVisionstar=Accidental Death Benefit Plus, SCamountAkshaya=, NRIAddressLocation=, pptN_Laabh=12 years, IsselectASP=NO, IsselectVisionstar=NO, ProposerMobileNumber=9960066619, CIamountASP=170000, ADMamountN_AyushPlan=120000, IsSCRiderPSK=Surgical Care, addressOne=abced, IsAddRiderAkshaya=YES, CIamountN_Laabh=NO, address3Nri=, IsselectASK=NO, noofyear=2, benefitfreqAkshaya=Quarterly, IsSumAssuredPSK=YES, stateNri=, HazardActivityBy=Under professional guidance, IsBenefitOptionVision_Endo=YES, IsPolicyTermCancer=YES, nextTravelled12MonthsDepartDate=, IsFamilyMedicalHBP=No, MarraigeBeneTermChild_future=32, AddressFour=Test, nriMicrCode=, addressTwo=abcd, IsDefermenntPeriodN_AyushPlan=YES, travelledOverLast12Months=, IsHSRiderAkshaya=No, IsHSRiderGMS=NO, pResidence=, relationship=Father, address2Nri=, Designation=Tester, PolicyType=, SCamountVision_Endo=, paymodeAIP=Quarterly, Addinfo=Addition Test Details, SCamountN_AyushPlan=160000, SumAssured=1250000, SCamountAIP=, policytermN_Laabh=42 years, IsselectFortune=NO, IsAddRiderChild_future=YES, IsADBRiderChild_future=NO, IsHSRiderN_Laabh=NO, stayAbroadSpecificReason=, CIamountCancer=170000, IsABGEmployeeVisionlife=, SelectPlan=ABSLI Nishchit Aayush Plan, IsBenefitOptionAIP=YES, Frequency=Occasionally, HCamountASP=, multiplierFortune=, termCancer=10, IsselectCancer=NO, nomineeLastName=Demo, IsPlanOptionCancer=NO, IsPaymodeAkshaya=YES, premiumamountASP=60000, IsPremiumAmountGMS=YES, creatorFundFortune=, AFWdetails=Test Details, NameOfEmployerSalaried=, AFWdoctordetails=Doctor Details, IswavierofpremiumASP=No, IsPPTOptionVision_Endo=YES, IsDisorder=Disorder, IsAddRiderN_Laabh=NO, IsBenifitOptionVisionlifeplus=NO, IsCoviddetails=Yes, paymodeGMS=Quarterly, benefitfreqN_Laabh=Quarterly, Advicetostop=Yes, benefitotionN_AyushPlan=Long Term Income, HCamountPSK=, Next12MonthCity=, IsSCRiderCancer=No, PolicytermSalaried=12, IsPaymodeCancer=NO, weight=42, AFWDDmonth=02, IsPaymodePSK=YES, ADDMamountChild_future=, premiumamountFortune=140000, IsPaymodeVisionstar=YES, IsEnterManual=YES, IsPlanOptionN_Laabh=Yes, PreferredLang=Hindi, countryTravelledNext12Months=, IsPaymodeN_Laabh=YES, paymentmethod=e-SI, IswavierofpremiumCancer=No, Visatype=Transit Visa, IsPremiumAmountFMP=Yes, IsPaymodeASP=YES, pptPSK=5, IsOptionGMS=YES, natureOfStayFNIO_PIO=, IsPanAvailabel=NO, paymodeSalaried=Semi-Annual, IsPaymodeASK=YES, travelledOverNext12Months=, CityAddress=New York, IsAreYouRegisterPerson=Yes, AFWLCday=11, IsHospitalization=Hospitalization, intendedDurationMonth=, paymodeN_Laabh=Quarterly, IsAadhaarCard=NO, IsADBRiderAIP=No, FNIOPIOButton=, IsCIRiderGMS=NO, PolicyTermPSK=12, HCamountN_Laabh=NO, assetFortune=, IsPPTASP=YES, maximiserFortune=, IsAddSister=Yes, nextTravelled12MonthsVisaType=, IsADDRiderPSK=NO, SumAssuredAmountVisionstar=8000002, AlternateNumber=9889655632, IsPPTOptionN_AyushPlan=YES, ProposerGender=Male, BenifitOptionVisionlifeplus=Whole Life Income, HCamountAkshaya=, CIamountPSK=, LifeStyleDetailsTN=Tobacco/Nicotine, liquidPlusFortune=, IsAbsentFromWork=Absent From Work, FAge=57, IsADBRiderN_Laabh=NO, AFWDDday=22, address1Nri=, NRICountry=American Samoa, paymodeAkshaya=Quarterly, SumAssuredPSK=6000000, policytermN_AyushPlan=25 Yrs, planOptionPSK=Level Cover Option, IsSCRiderN_Pension=Surgical Care, LifeStyleDetailsA=Alcohol Consumption, IsCoviddetailsHospitalized=Yes, PlanOptionASP=Option 1, IsPPTOptionN_Laabh=YES, MarraigeMultipleChild_future=200%, IsADBRiderCancer=No, providePaymentDetail=, pptOptionVisionlife=22, PolicyTermASP=5, benefitperiodAIP=30, PlanOptionCancer=Level Sum Assured, purposeOfStayFNIO_PIO=, durationInMonths=, IsAddRiderASP=YES, ProposerLastName=Singh, IsSAmultiplierN_AyushPlan=YES, ProposerSalutation=Mr., ProposerDOB=26082001, ProposerPanNumber=MKSPS4374P, ADDMamountPSK=, policytermAIP=9 Yrs, DefermentPeriodN_Pension=0 year, IsGynaecological=Gynaecological Problem, BenifitPayoutPeriodVisionlife=20, pinCode=783335, natureofbusiness=Testing, Country=Bahamas, IsPolicyTermSalaried=YES, pptN_AyushPlan=6 Yrs, IsPremiumAmountN_Pension=YES, LifeStyleDetailsN=Narcotics, IsFamilyMedicalPyr=No, pptChild_future=8, AFWDDyear=2018, rbiPermitNumber=, IsselectN_Laabh=NO, IsselectAIPPlan=YES, benefitotionAIP=Income with Lumpsum Benefit, IsPPTOptionVisionlife=YES, benefitfreqN_AyushPlan=Annual, pptAIP=8 Yrs, IswavierofpremiumVision_Endo=No, IsAddRiderVision_Endo=NO, SDeathcause=, pptN_Pension=10 Yrs, IsHSRiderAIP=No, SCamountChild_future=200000, ISPlanBasedOnChild_future=YES, nriPaymentDetails=, IsIncomeBenifitPayoutFrequencyVisionlifeplus=NO, ProvideDetails=Test Details, IsCIRiderChild_future=NO, IsHSRiderChild_future=NO, IsPlanOptionVisionstar=YES, magnifierFortune=, IsBenefitfrequencyN_Laabh=YES, RideramountVisionlife=500000, IsPPTOptionFortune=YES, assureFundFortune=, IsADDRiderGMS=NO, LifeStyleDetailsHZ=Hazardous Activities, cityNri=, IsPaymodeVisionlife=YES, SCamountGMS=200000, nextTravelled12MonthsArrivalDate=, CIamountAIP=170000, IspolicytermN_Laabh=YES, IsPPTOptionAIP=YES, VisitYear=2021, pureEquityFortune=, IsHSRiderCancer=No, HCamounty=, IswavierofpremiumN_Pension=, IsBenefitPeriodAIP=YES, InsurerBirthPlace=India, countryTravelledLast12Months=, DateofDept=10102024, IsInvestMentOptionFortune=YES, HCamountN_Pension=, benefitotionAkshaya=Long Term Income, IsPaymodeSalaried=YES, MotherStatus=Living, SAge=42, SDeathage=, FDeathcause=, IsHaveEIA=Want to Apply, CIamountChild_future=, Hospital=Kiran Diagnostics, IsSmokingStatusPSK=YES, day=12, PlanOptionN_Laabh=Option 2 - Income with Lumpsum Option, superTwentyFortune=, InsurerNameRef=, VisitMonth=10, IsCIRiderAIP=Critical Illness, PlanSelectionJourney=Recommend Plans, PremiumAmountVisionlifeplus=70000, BenifitOptionVisionlife=Income Only Benefit, IsFamilyMedicalStroke=No, investMentOptionFortune=Return Optimiser, qualification=Graduate, IsPPTOptionFMP=Yes, benefitfreqAIP=Quarterly, SCamountCancer=, IsBenefitfrequencyAIP=YES, IsAilments=No, pptOptionVisionstar=6, SPCode=A01193, CIamountN_AyushPlan=160000, IsHSRiderVision_Endo=No, paymodeVisionlifeplus=Quarterly, ProposerName=Harsh, IsPolicyTermFMP=Yes, IsSCRiderASP=No, IsSmokingStatusASK=YES, IsSpouseHealth=Spouse Health, haveNriAccount=, Reason=Test Reason, IsBenifitPayoutPeriodVisionlifeplus=, CommAddressType=, MarraigeAssuredAgeChild_future=, IsselectChild_future=NO, RideramountVisionstar=500001, exchangeFacility=, IncomeBenifitPayoutFrequencyVisionlife=Annual, IswavierofpremiumAIP=No, mnuFortune=, Tobaccotype=Bidi, IsAddRiderN_Pension=YES, Insumarital=Divorced, IsADBRiderASP=, quantity=25, IsCIRiderVision_Endo=Critical Illness, ADBamountPSK=, IncomeVariantN_AyushPlan=Level Income with Lumpsum Benefit, Quantity=60, TypeOfNRI=PIO, NoofWeeeks=3, AddExistingPolicies=, nameofbusiness=Automation, MonthDuration=During 13 to 60 M, IsACIPSK=YES, IsSumAssuredASK=YES, IsPPTOptionSalaried=YES, pptOptionSalaried=7, PanDOBEdit=NO, IsPaymodeVisionlifeplus=YES, IsDefermenntPeriodN_Pension=YES, paymodeCancer=Quarterly, ModeofPaymentECCD=HDFC Bank Credit Card, PreferredIR=National Insurance Policy Repository, EduBenePeriodChild_future=9}</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.HashMap.get(Object)&quot; is null
+	at Utils.EndToEndProSameJourney.gotoEndToEndSameJourney(EndToEndProSameJourney.java:318)
+	at com.absli.testcases.EndtoEndProposerSame.CompletesamePSK2(EndtoEndProposerSame.java:168)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1631914272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1631914272'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equalsIgnoreCase(String)&quot; because the return value of &quot;java.util.HashMap.get(Object)&quot; is null
+	at Utils.EndToEndProSameJourney.gotoEndToEndSameJourney(EndToEndProSameJourney.java:318)
+	at com.absli.testcases.EndtoEndProposerSame.CompletesamePSK2(EndtoEndProposerSame.java:168)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>318</td>
+<td>com.absli.testcases.EndtoEndProposerSame@31e75d13</td></tr>
+</table><p>
+</body>
+</html>

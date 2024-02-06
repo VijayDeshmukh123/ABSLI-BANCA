@@ -1,0 +1,10 @@
+{
+    "loginId": "002646",
+    "applicationId": "655dea85b0b1596193da7895",
+    "applicationNumber": "LA50039818",
+    "screenCode": "summary",
+    "actionCode": "getApplication",
+    "channelCode": "C000003",
+    "retrieveSession": "0",
+    "validateUIN": true
+}

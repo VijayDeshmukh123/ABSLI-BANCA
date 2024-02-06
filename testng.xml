@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="LEAP Test-Automation-Banca"  parallel="tests" thread-count="6">
+    <listeners>
+        <listener class-name="com.absli.Listner.CustomListner"/>
+    </listeners>
+
+  <test name="Suite Test1">
+        <classes>
+            <class name="com.absli.testcases.TestRunner">
+                <methods>
+                    <include name="CompletesminorGMSA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+     
+   
+   
+
+  <!-- 
+    <test name="Suite Test3">
+        <classes>
+            <class name="com.absli.testcases.TestRunner">
+                <methods>
+                    <include name="CompleteMajorDifferentGMSA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    -->
+
+    <!--
+    <test name="Suite Test4">
+        <classes>
+            <class name="com.absli.testcases.EndtoEndJoint_Life">
+                <methods>
+                    <include name="CompletejointGMSA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    -->
+
+    <!--
+    <test name="Suite Test5">
+        <classes>
+            <class name="com.absli.testcases.EndtoEndProposerCompany">
+                <methods>
+                    <include name="CompletecompanyAAPA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    -->
+
+</suite>
