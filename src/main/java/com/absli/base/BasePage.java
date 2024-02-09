@@ -45,10 +45,21 @@ public class BasePage {
 
                 case "web":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless");
+                    options.addArguments("headless");
+                    options.addArguments("window-size=1920,1080");
+                    driver.set(new ChromeDriver(options));
+                   // WebDriver driver = new ChromeDriver(option);
+                   // WebDriverManager.chromedriver().setup();
+                    //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+
+                    // Instantiate ChromeDriver
+                  //  WebDriver driver = new ChromeDriver();
+
+//                    ChromeOptions options = new ChromeOptions();
+//                    options.addArguments("--headless");
 
                     // Instantiate ChromeDriver with options
-                    driver.set(new ChromeDriver(options));
+                   // driver.set(new ChromeDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
