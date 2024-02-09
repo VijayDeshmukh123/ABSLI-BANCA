@@ -2,7 +2,7 @@ package com.absli.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import io.qameta.allure.Allure;

@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.aventstack.extentreports.Status;
 import io.qameta.allure.Allure;
@@ -609,7 +609,7 @@ if (AddBTN.isDisplayed()) {
 				if (causeOfDeath.isDisplayed()) {
 					causeOfDeath.click();
 					Thread.sleep(1000);
-					ExtentFactory.getInstance().getExtent().log(Status.INFO, "Successfully Display  Father  Cause Of Death on family Medical");
+					// .log(Status.INFO, "Successfully Display  Father  Cause Of Death on family Medical");
 					WebElement selectdropdwon =getDriver().findElement(By.xpath("//ul//div/span[text()='"+FMBSStateAndCause+"']"));
 					 // wait.waitForElementToBeVisibleweb(getDriver(), Sisterdthcause, 20, "Element is Not Display");
 				      selectdropdwon.click();
@@ -865,7 +865,7 @@ if (BrotherLivingDemise.equalsIgnoreCase("Living")) {
 	if (Sistersateofhealth.isDisplayed()) {
 		Sistersateofhealth.click();
 		Thread.sleep(1000);
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Successfully Display  Sister  State Of Health on Health Details  family Medical");
+		// .log(Status.INFO, "Successfully Display  Sister  State Of Health on Health Details  family Medical");
 		WebElement selectdropdwon =getDriver().findElement(By.xpath("//ul//li//span[text()='"+BrotherStateAndCause+"']"));
 		 wait.waitForElementToBeVisibleweb(getDriver(), selectdropdwon, 5, "Element is Not Display");
 	      selectdropdwon.click();

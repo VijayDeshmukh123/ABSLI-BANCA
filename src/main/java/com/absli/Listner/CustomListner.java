@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 import org.openqa.selenium.WebDriver;
 
 import com.absli.base.BasePage;
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 
 
 public class CustomListner extends TestBase implements ITestListener{
@@ -26,7 +26,7 @@ public class CustomListner extends TestBase implements ITestListener{
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName(),result.getMethod().getDescription());;
 		//extentTest.set(test);
-		ExtentFactory.getInstance().setExtent(test);
+		//ExtentFactory.getInstance().setExtent(test);
 
 	}
 
@@ -34,14 +34,14 @@ public class CustomListner extends TestBase implements ITestListener{
 	public void onTestSuccess(ITestResult result) {
 
 
-		ExtentFactory.getInstance().getExtent().log(Status.PASS, "Test Case Successfully Passed");
-		ExtentFactory.getInstance().removeExtentObject();
+		//ExtentFactory.getInstance().getExtent().log(Status.PASS, "Test Case Successfully Passed");
+		//ExtentFactory.getInstance().removeExtentObject();
 		//extentTest.get().log(Status.PASS, "Test Case passed Sucessfully");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ExtentFactory.getInstance().getExtent().fail(result.getThrowable());
+		//ExtentFactory.getInstance().getExtent().fail(result.getThrowable());
 		//extentTest.get().fail(result.getThrowable());
 		System.out.println("FAILED test");
 		System.out.println("**************************************");
@@ -55,11 +55,11 @@ public class CustomListner extends TestBase implements ITestListener{
          result.getMethod().getDescription();
          extentTest.get().log(LogStatus.FAIL, test.addScreenCaptureFromPath(screenshotPath));
          //extentTest.get().addScreenCaptureFromPath(screenshotPath);*/
-			ExtentFactory.getInstance().getExtent().addScreenCaptureFromPath(failedWeb(result.getMethod().getMethodName()));
-			ExtentFactory.getInstance().removeExtentObject();
+			//ExtentFactory.getInstance().getExtent().addScreenCaptureFromPath(failedWeb(result.getMethod().getMethodName()));
+			//ExtentFactory.getInstance().removeExtentObject();
 
 
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -67,8 +67,8 @@ public class CustomListner extends TestBase implements ITestListener{
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		ExtentFactory.getInstance().getExtent().log(Status.SKIP, result.getMethod().getMethodName()+"Test Case Skipped");
-		ExtentFactory.getInstance().removeExtentObject();
+		//ExtentFactory.getInstance().getExtent().log(Status.SKIP, result.getMethod().getMethodName()+"Test Case Skipped");
+		//ExtentFactory.getInstance().removeExtentObject();
 
 
 	}

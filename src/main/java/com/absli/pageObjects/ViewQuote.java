@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import com.aventstack.extentreports.Status;
@@ -1130,7 +1130,7 @@ public class ViewQuote extends TestBase {
         WebElement planOptions= getDriver().findElement(By.xpath("//li//span[text()=\""+planOpt+"\"]"));
         wait.waitforElementToBeClickable(getDriver(), planOptions, 100);
         planOptions.click();
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select on plan Option  As=====>"+planOpt);
+        // .log(Status.INFO, "Select on plan Option  As=====>"+planOpt);
     }
 
     /////////salaried
@@ -1176,10 +1176,10 @@ public class ViewQuote extends TestBase {
             if (ele2.isDisplayed()) {
                 ele2.click();
             } else {
-                //ExtentFactory.getInstance().getExtent().log(LogStatus.FAIL, "Failed To Display=====>"+val);
+                //// .log(LogStatus.FAIL, "Failed To Display=====>"+val);
             }
         }catch(NoSuchElementException e) {
-            //ExtentFactory.getInstance().getExtent().log(LogStatus.FAIL, "Unable To Locate Element On Page");
+            //// .log(LogStatus.FAIL, "Unable To Locate Element On Page");
         }
     }
 //    @FindBy(xpath = "//div[contains(@id,'mui-component-select-productNameOptionQst')]")
@@ -1193,10 +1193,10 @@ public class ViewQuote extends TestBase {
             if (ele2.isDisplayed()) {
                 ele2.click();
             } else {
-                //ExtentFactory.getInstance().getExtent().log(LogStatus.FAIL, "Failed To Display=====>"+val);
+                //// .log(LogStatus.FAIL, "Failed To Display=====>"+val);
             }
         }catch(NoSuchElementException e) {
-            //ExtentFactory.getInstance().getExtent().log(LogStatus.FAIL, "Unable To Locate Element On Page");
+            //// .log(LogStatus.FAIL, "Unable To Locate Element On Page");
         }
     }
     @FindBy(xpath = "//div[contains(@id,'mui-component-select-incomeBenefitPeriodQst')]")
@@ -1293,9 +1293,9 @@ public class ViewQuote extends TestBase {
         wait.waitforElementToBeClickable(getDriver(), CloseBTN, 100);
         if(CloseBTN.isDisplayed()) {
             CloseBTN.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Close Button");
+            // .log(Status.INFO, "Click on Close Button");
         }else {
-            ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Close Button is Not Display");
+            // .log(Status.FAIL, "Close Button is Not Display");
         }
 
     }
@@ -1306,20 +1306,20 @@ public class ViewQuote extends TestBase {
         wait.waitForElementToBeVisibleweb( getDriver(), benifitOption, 30, "Element is Not Display On Page");
         if (benifitOption.isDisplayed()) {
             benifitOption.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on investMentOption DropDown");
+            // .log(Status.INFO, "click on investMentOption DropDown");
             Thread.sleep(3000);
             WebElement benifitOptionValue =  getDriver().findElement(By.xpath("//ul//li//div//span[contains(text(),'"+val+"')]"));
             if (benifitOptionValue.isDisplayed()) {
 
                 benifitOptionValue.click();
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select Investment DropDown value As====>"+val);
+                // .log(Status.INFO, "Select Investment DropDown value As====>"+val);
             } else {
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Investment DropDown value is not display");
+                // .log(Status.INFO, "Investment DropDown value is not display");
             }
 
         }
         else {
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "PT DropDown is not display");
+            // .log(Status.INFO, "PT DropDown is not display");
         }
     }
     public void selectBenifitPayoutPeriodWeb(String val) throws InterruptedException {
@@ -1328,20 +1328,20 @@ public class ViewQuote extends TestBase {
         wait.waitForElementToBeVisibleweb( getDriver(), benifitPayoutPeriod, 30, "Element is Not Display On Page");
         if (benifitPayoutPeriod.isDisplayed()) {
             benifitPayoutPeriod.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on investMentOption DropDown");
+            // .log(Status.INFO, "click on investMentOption DropDown");
             Thread.sleep(3000);
             WebElement benifitPayoutPeriodValue =  getDriver().findElement(By.xpath("//ul//li//div//span[contains(text(),'"+val+"')]"));
             if (benifitPayoutPeriodValue.isDisplayed()) {
 
                 benifitPayoutPeriodValue.click();
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select Investment DropDown value As====>"+val);
+                // .log(Status.INFO, "Select Investment DropDown value As====>"+val);
             } else {
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Investment DropDown value is not display");
+                // .log(Status.INFO, "Investment DropDown value is not display");
             }
 
         }
         else {
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "PT DropDown is not display");
+            // .log(Status.INFO, "PT DropDown is not display");
         }
     }
 
@@ -1351,20 +1351,20 @@ public class ViewQuote extends TestBase {
         wait.waitForElementToBeVisibleweb( getDriver(), benifitPayout, 30, "Element is Not Display On Page");
         if (benifitPayout.isDisplayed()) {
             benifitPayout.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on investMentOption DropDown");
+            // .log(Status.INFO, "click on investMentOption DropDown");
             Thread.sleep(3000);
             WebElement benifitPayoutValue =  getDriver().findElement(By.xpath("//ul//li//div//span[contains(text(),'"+val+"')]"));
             if (benifitPayoutValue.isDisplayed()) {
 
                 benifitPayoutValue.click();
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select Investment DropDown value As====>"+val);
+                // .log(Status.INFO, "Select Investment DropDown value As====>"+val);
             } else {
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Investment DropDown value is not display");
+                // .log(Status.INFO, "Investment DropDown value is not display");
             }
 
         }
         else {
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "PT DropDown is not display");
+            // .log(Status.INFO, "PT DropDown is not display");
         }
     }
     public void selectBonusUtilizationOptionWeb(String val) throws InterruptedException {
@@ -1373,20 +1373,20 @@ public class ViewQuote extends TestBase {
         wait.waitForElementToBeVisibleweb( getDriver(), bonusUtilizationOption, 30, "Element is Not Display On Page");
         if (bonusUtilizationOption.isDisplayed()) {
             bonusUtilizationOption.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on investMentOption DropDown");
+            // .log(Status.INFO, "click on investMentOption DropDown");
             Thread.sleep(3000);
             WebElement bonusUtilizationOptionValue =  getDriver().findElement(By.xpath("//ul//li//div//span[contains(text(),'"+val+"')]"));
             if (bonusUtilizationOptionValue.isDisplayed()) {
 
                 bonusUtilizationOptionValue.click();
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select Investment DropDown value As====>"+val);
+                // .log(Status.INFO, "Select Investment DropDown value As====>"+val);
             } else {
-                ExtentFactory.getInstance().getExtent().log(Status.INFO, "Investment DropDown value is not display");
+                // .log(Status.INFO, "Investment DropDown value is not display");
             }
 
         }
         else {
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "PT DropDown is not display");
+            // .log(Status.INFO, "PT DropDown is not display");
         }
     }
     public void payMode(String paymode){
@@ -1398,7 +1398,7 @@ public class ViewQuote extends TestBase {
             wait.waitforElementToBeClickable(getDriver(), PayModeAnnual, 100);
 
             PayModeAnnual.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
+            // .log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
         }else if(paymode.equalsIgnoreCase("Semi-Annual")){
 
 
@@ -1406,7 +1406,7 @@ public class ViewQuote extends TestBase {
             wait.waitforElementToBeClickable(getDriver(), PayModeSemiAnnual, 100);
 
             PayModeSemiAnnual.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
+            // .log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
         }else if(paymode.equalsIgnoreCase("Quarterly")){
 
 
@@ -1415,13 +1415,13 @@ public class ViewQuote extends TestBase {
 
             PayModeQuarterly.click();
 
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
+            // .log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
         }else{
 
             WebElement PayModeMonthly= getDriver().findElement(By.xpath("//div[text()='Monthly']"));
             wait.waitforElementToBeClickable(getDriver(), PayModeMonthly, 100);
 
             PayModeMonthly.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
+            // .log(Status.INFO, "Select on Pay Mode    As=====>"+paymode);
         }}
 }

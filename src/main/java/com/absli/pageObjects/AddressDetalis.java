@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import com.aventstack.extentreports.Status;
@@ -112,7 +112,7 @@ public class AddressDetalis extends TestBase {
 			AddressDropdown.click();
 			 Allure.step ("click on Address Dropdown");
 		} else {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Address Dropdown is not displayed");
+			// .log(Status.FAIL, "Address Dropdown is not displayed");
 		}
 
 	}
@@ -125,7 +125,7 @@ public class AddressDetalis extends TestBase {
 	    		 dropdownvalue.click();
 	    		 Allure.step ("Select Type Of Address Value As =====>"+args);
 	    	 }else {
-	    		 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Type Of Address value is Not Display");
+	    		 // .log(Status.FAIL, "Type Of Address value is Not Display");
 	    	 }
 	    	
 	    	
@@ -147,7 +147,7 @@ public class AddressDetalis extends TestBase {
 	        	 Allure.step ("Enter Pincode  Value As =====>"+pinCode);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "pincide is not displayed");
+	        	// .log(Status.FAIL, "pincide is not displayed");
 	        }
 	    }
 	    
@@ -158,7 +158,7 @@ public class AddressDetalis extends TestBase {
 	        	 Allure.step("Enter Addeass1  Value As =====>"+addressOne);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Address1 is not displayed");
+	        	// .log(Status.FAIL, "Address1 is not displayed");
 	        }
 	    }
 	   
@@ -169,7 +169,7 @@ public class AddressDetalis extends TestBase {
 	        	 Allure.step ("Enter City  Value As =====>"+Val);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "City is not displayed");
+	        	// .log(Status.FAIL, "City is not displayed");
 	        }
 	    }
 	    
@@ -180,7 +180,7 @@ public class AddressDetalis extends TestBase {
 	        	 Allure.step ("Enter State   Value As =====>"+Val);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "State is not displayed");
+	        	// .log(Status.FAIL, "State is not displayed");
 	        }
 	    }
 	    
@@ -195,7 +195,7 @@ public class AddressDetalis extends TestBase {
 	        	 Allure.step("Enter Country  Value As =====>"+Val);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Country is not displayed");
+	        	// .log(Status.FAIL, "Country is not displayed");
 	        }
 	    }
 
@@ -204,20 +204,20 @@ public class AddressDetalis extends TestBase {
 			if(next.isDisplayed()) {
 				next.click();
 				
-				ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Address SUBMIT BTN ");
+				// .log(Status.INFO, "Click on Address SUBMIT BTN ");
 			}
 			else {
-				ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Address SUBMIT BTN is Not Display");
+				// .log(Status.FAIL, "Address SUBMIT BTN is Not Display");
 			}
 	    }
 	    public void EnterCityAddressWeb(String Val){
 	       
 	        if(city.isDisplayed()){
 	        	city.sendKeys(Val);
-	            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter City  Value As =====>"+Val);
+	            // .log(Status.INFO, "Enter City  Value As =====>"+Val);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "City is not displayed");
+	        	// .log(Status.FAIL, "City is not displayed");
 	        }
 	    }
 	    
@@ -225,10 +225,10 @@ public class AddressDetalis extends TestBase {
 	        
 	        if(state.isDisplayed()){
 	        	state.sendKeys(Val);
-	            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter State   Value As =====>"+Val);
+	            // .log(Status.INFO, "Enter State   Value As =====>"+Val);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "State is not displayed");
+	        	// .log(Status.FAIL, "State is not displayed");
 	        }
 	    }
 	    
@@ -236,9 +236,9 @@ public class AddressDetalis extends TestBase {
 	      	
 	          if(AlertPopUpEle.isDisplayed()) {
 	        	  AlertPopUpEle.click();
-	          ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Alert Pop Up Okay Button ");
+	          // .log(Status.INFO, "Click on Alert Pop Up Okay Button ");
 	          }else {
-	          ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Alert Pop Up Okay Button  is not Display");
+	          // .log(Status.FAIL, "Alert Pop Up Okay Button  is not Display");
 	          }
 	      }
 	    
@@ -250,13 +250,13 @@ public class AddressDetalis extends TestBase {
 	        		 ClearPinCode.sendKeys(Keys.BACK_SPACE);
 	        		 ClearPinCode.sendKeys(Keys.DELETE);
 		            }
-				ExtentFactory.getInstance().getExtent().log(Status.INFO, "Remove Proposer PinCode");
+				// .log(Status.INFO, "Remove Proposer PinCode");
 				ClearPinCode.sendKeys(pinCode);
 	        	Thread.sleep(2000);
-	            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter Pincode  Value As =====>"+pinCode);
+	            // .log(Status.INFO, "Enter Pincode  Value As =====>"+pinCode);
 	           }
 	        else {
-	        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "pincide is not displayed");
+	        	// .log(Status.FAIL, "pincide is not displayed");
 	        }
 	    }
 	   
@@ -479,10 +479,10 @@ public class AddressDetalis extends TestBase {
 		if(next.isDisplayed()) {
 			next.click();
 			
-			ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on "+val+" Button");
+			// .log(Status.INFO, "Click on "+val+" Button");
 		}
 		else {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, val+" Button is Not Display");
+			// .log(Status.FAIL, val+" Button is Not Display");
 		}
     }
 
@@ -493,10 +493,10 @@ public class AddressDetalis extends TestBase {
 		if(next.isDisplayed()) {
 			next.click();
 			
-			ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on "+val+" Button");
+			// .log(Status.INFO, "Click on "+val+" Button");
 		}
 		else {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, val+" Button is Not Display");
+			// .log(Status.FAIL, val+" Button is Not Display");
 		}
     }
 

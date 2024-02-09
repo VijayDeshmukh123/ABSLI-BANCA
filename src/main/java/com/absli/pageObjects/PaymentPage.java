@@ -174,7 +174,7 @@ public void UploadDECLARATIONFORMImgWEB() throws InterruptedException, IOExcepti
 	 
 		 
 		 SelectVal.sendKeys(destination);
-		 ExtentFactory.getInstance().getExtent().log(Status.INFO, "Failed to upload file...Upload Button is not Display");
+		 // .log(Status.INFO, "Failed to upload file...Upload Button is not Display");
 	
 	   
     
@@ -309,10 +309,10 @@ public void ClickOnWinBackModeweb() {
        // waitUtils.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), identityBTN, 20, "Element is Not Display");
         if(identityBTN.isEnabled()) {
         	identityBTN.click();
-          // ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On ECDF Checkbox ");
+          // // .log(Status.INFO, "Click On ECDF Checkbox ");
         }else {
         	identityBTN.click();
-        	//ExtentFactory.getInstance().getExtent().log(Status.INFO, "ECDF Checkbox is not display ");
+        	//// .log(Status.INFO, "ECDF Checkbox is not display ");
         }
     }
     
@@ -328,9 +328,9 @@ public void ClickDDBTNweb() throws InterruptedException {
 	 wait.waitforElementToBeClickable(getDriver(), DDBTN, 10);
 	if(DDBTN.isDisplayed()) {
 	   DDBTN.click();
-       ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click   On CDD Payment ");
+       // .log(Status.INFO, "Click   On CDD Payment ");
    }else {
-   	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "DD  Button  is not display ");
+   	// .log(Status.FAIL, "DD  Button  is not display ");
    }
 }
 
@@ -339,9 +339,9 @@ public void ClickChequeBTNweb() throws InterruptedException {
 	 wait.waitforElementToBeClickable(getDriver(), ChequeBTN, 10);
 	if(ChequeBTN.isDisplayed()) {
 		ChequeBTN.click();
-       ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click   On cheque button  ");
+       // .log(Status.INFO, "Click   On cheque button  ");
    }else {
-   	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "DD  Button  is not display ");
+   	// .log(Status.FAIL, "DD  Button  is not display ");
    }
 }
     public void EnterChequeDDNoWeb(String ChequeDDNo) {
@@ -475,7 +475,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 			 SelectBranchDropDown.sendKeys(Keys.ENTER);
         	  Allure.step ("Click Or Select deposit the cheque at other branch  As=====>"+val);
         }else {
-        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Payment Mode button is not display ");
+        	// .log(Status.FAIL, "Payment Mode button is not display ");
         }
     }
     public void ClickpaymentDoitLaterbutton() {
@@ -627,7 +627,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 			RtgsChechBox.click();
 			 Allure.step( "Click on RTGS Checkbox");
         } else {
-			 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Checkbox is Not Enable");
+			 // .log(Status.FAIL, "Checkbox is Not Enable");
 		}
 
 	}
@@ -639,7 +639,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 			 Allure.step( "Click on RTGS Submit Button");
 			
 		} else {
-			 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Submit BTN is Not Enable");
+			 // .log(Status.FAIL, "Submit BTN is Not Enable");
 		}
 
 	}

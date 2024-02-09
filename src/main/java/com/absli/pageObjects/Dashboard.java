@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import com.aventstack.extentreports.Status;
@@ -70,9 +70,9 @@ public class Dashboard extends TestBase {
         wait.waitForElementToBeVisibleweb(getDriver(), newCustomerBtn, 30, "Element is Not Visible");
         if(newCustomerBtn.isDisplayed()){
             newCustomerBtn.click();
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On New Customer Button");
+        // .log(Status.INFO, "Click On New Customer Button");
         }else {
-        	 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "New Customer Button is Not Display");
+        	 // .log(Status.FAIL, "New Customer Button is Not Display");
         }
     }
 
@@ -105,9 +105,9 @@ public class Dashboard extends TestBase {
       
         if(yesbtn.isDisplayed()){
         yesbtn.click();
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On NRI Yes Button");
+        // .log(Status.INFO, "Click On NRI Yes Button");
         }else {
-       ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Yes Button Is Not Display");
+       // .log(Status.FAIL, "Yes Button Is Not Display");
         }
     }
     public void selectTypeOfNRIWeb(String TypeOfNRI){
@@ -116,7 +116,7 @@ public class Dashboard extends TestBase {
         WebElement NRIOpt= getDriver().findElement(By.xpath("//span[text()='"+TypeOfNRI+"']"));
         //waitUtils.waitforElementToBeClickable(WebDriverFactoryStaticThreadLocal.getDriver(), NRIOpt, 100);
         NRIOpt.click();
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select NRI Option  As=====>"+TypeOfNRI);
+        // .log(Status.INFO, "Select NRI Option  As=====>"+TypeOfNRI);
     }
    public void SelectNRICountryWeb(String val) throws InterruptedException {
 	  
@@ -126,9 +126,9 @@ public class Dashboard extends TestBase {
     	   ele1.sendKeys(Keys.ARROW_DOWN);
     	   ele1.sendKeys(Keys.ARROW_DOWN);
     	   ele1.sendKeys(Keys.ENTER);
-    	   ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter NRI Country Values As=====>"+val);
+    	   // .log(Status.INFO, "Enter NRI Country Values As=====>"+val);
        }else {
-    	   ExtentFactory.getInstance().getExtent().log(Status.FAIL, "NRI Country TextBox Is Not Display");
+    	   // .log(Status.FAIL, "NRI Country TextBox Is Not Display");
        }
 	
 }

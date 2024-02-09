@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 import com.absli.base.BasePage;
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import com.aventstack.extentreports.Status;
@@ -300,7 +300,7 @@ public class DocumentsPage extends TestBase {
         WebElement SelectType = getDriver().findElement(By.xpath("//div[@aria-haspopup='listbox']"));
         wait.waitforElementToBeClickable(getDriver(), SelectType, 20);
         SelectType.click();
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On Select Type of document DropDown");
+        // .log(Status.INFO, "Click On Select Type of document DropDown");
         wait.WaitTime(2);
         try{
             WebElement SelectVal=getDriver().findElement(By.xpath("//ul/li/div/span[starts-with(text(),'"+val+"')]"));
@@ -388,9 +388,9 @@ public class DocumentsPage extends TestBase {
         wait.waitForElementToBeVisibleweb(getDriver(), identityBTN, 20, "Element is Not Display");
         if(identityBTN.isDisplayed()) {
         	identityBTN.click();
-           //// ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On Address Proof Tile ");
+           //// // .log(Status.INFO, "Click On Address Proof Tile ");
         }else {
-        	ExtentFactory.getInstance().getExtent().log(Status.INFO, "Address Proof Tile is not display ");
+        	// .log(Status.INFO, "Address Proof Tile is not display ");
         }
     }
     
@@ -399,14 +399,14 @@ public class DocumentsPage extends TestBase {
 		//wait.waitforElementToBeClickable(WebDriverFactoryStaticThreadLocal.getDriver(), SelectType, 20);
 		SelectType.click();
 		Thread.sleep(2000);
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On Select Type of document DropDown");
+		// .log(Status.INFO, "Click On Select Type of document DropDown");
 
 		WebElement SelectVal = getDriver()
 				.findElement(By.xpath("//ul//li//span[contains(text(),'" + val + "')]"));
 		//wait.waitforElementToBeClickable(WebDriverFactoryStaticThreadLocal.getDriver(), SelectVal, 20);
 		Thread.sleep(2000);
 		SelectVal.click();
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Select Values As=====>" + val);
+		// .log(Status.INFO, "Select Values As=====>" + val);
 
 	}
     
@@ -432,9 +432,9 @@ public class DocumentsPage extends TestBase {
       //  wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), identityBTN, 20, "Element is Not Display");
         if(identityBTN.isDisplayed()) {
         	identityBTN.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On ECS  Tile ");
+            // .log(Status.INFO, "Click On ECS  Tile ");
         }else {
-        	ExtentFactory.getInstance().getExtent().log(Status.INFO, "ECS Tile is not display ");
+        	// .log(Status.INFO, "ECS Tile is not display ");
         }
     }
     
@@ -443,9 +443,9 @@ public class DocumentsPage extends TestBase {
        // wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), identityBTN, 20, "Element is Not Display");
         if(identityBTN.isDisplayed()) {
         	identityBTN.click();
-           //// ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click On Income Proof Tile ");
+           //// // .log(Status.INFO, "Click On Income Proof Tile ");
         }else {
-        	ExtentFactory.getInstance().getExtent().log(Status.INFO, "Income Proof Tile is not display ");
+        	// .log(Status.INFO, "Income Proof Tile is not display ");
         }
     }
     
@@ -456,9 +456,9 @@ public class DocumentsPage extends TestBase {
        // wait.waitforElementToBeClickable(WebDriverFactoryStaticThreadLocal.getDriver(), SearchBTN, 30);
         if(SearchBTN.isDisplayed()) {
         	SearchBTN.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Alert Ok Button");
+            // .log(Status.INFO, "Click on Alert Ok Button");
         }else {
-        	ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Alert Ok Button is not display ");
+        	// .log(Status.FAIL, "Alert Ok Button is not display ");
         }
     }
 
@@ -468,7 +468,7 @@ public class DocumentsPage extends TestBase {
       	//wait.waitForElementToBeVisibleweb( WebDriverFactoryStaticThreadLocal.getDriver(), SelectVal, 0, "Element is not Display");
       	String destination= System.getProperty("user.dir")+"/FileUpload/SRIDEVI_PARVATIKAR_DigiShield.pdf";
       		 SelectVal.sendKeys(destination);
-      		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Successfully Uploaded Form 60  File");
+      		// .log(Status.INFO, "Successfully Uploaded Form 60  File");
       	
          
 	 }

@@ -60,9 +60,9 @@ public class RandAPage extends TestBase  {
     	  wait.waitForElementToBeVisibleweb(getDriver(), TDSYesBTNBtn, 10, "Element is Not Display");
         if(ReviewBTN.isDisplayed()) {
             ReviewBTN.click();
-            ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on review Button");
+            // .log(Status.INFO, "Click on review Button");
         }else {
-            ExtentFactory.getInstance().getExtent().log(Status.FAIL,  "Review button not Display");
+            // .log(Status.FAIL,  "Review button not Display");
         }
 
     }

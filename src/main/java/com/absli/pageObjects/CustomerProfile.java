@@ -1,6 +1,6 @@
 package com.absli.pageObjects;
 
-import com.absli.base.ExtentFactory;
+//import com.absli.base.ExtentFactory;
 import com.absli.base.TestBase;
 import com.absli.utils.WaitUtils;
 import com.aventstack.extentreports.Status;
@@ -339,7 +339,7 @@ public class CustomerProfile extends TestBase {
             leadIdInputWeb.sendKeys(args);
             Allure.step  ("Enter Lead Value As =====>"+args);
         } else {
-        ExtentFactory.getInstance().getExtent().log(Status.INFO, "Failed to Enter  Lead Value As =====>"+args);
+        // ExtentFactory.getInstance().getExtent().log(Status.INFO, "Failed to Enter  Lead Value As =====>"+args);
             System.out.println("leadId input box is not visible");
         }
     }
@@ -921,7 +921,7 @@ public class CustomerProfile extends TestBase {
 			 Allure.step( "Select relation With The To Be Insured Values As=====>"+val);
 			
 		}else {
-			//ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Relation With The To Be Insured DropDown Value Is Not Display");
+			//// ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Relation With The To Be Insured DropDown Value Is Not Display");
 		}
 	
 	}
@@ -965,9 +965,9 @@ public class CustomerProfile extends TestBase {
 		if (termAndCondition.isEnabled()) {
 			termAndCondition.click();
 			 Allure.step( "Click on Proposer I Agree Checkbox");
-			// ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Proposer I Agree Checkbox");
+			// // ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Proposer I Agree Checkbox");
 		} else {
-			 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Proposer I Agree Checkbox is Not Enable");
+			 // ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Proposer I Agree Checkbox is Not Enable");
 		}
 
 	}
@@ -978,10 +978,10 @@ public class CustomerProfile extends TestBase {
 		if (termAndCondition1.isEnabled()) {
 			termAndCondition1.click();
 			 Allure.step( "Click on Proposer I Agree Checkbox");
-			// ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Proposer I Agree Checkbox");
+			// // ExtentFactory.getInstance().getExtent().log(Status.INFO, "Click on Proposer I Agree Checkbox");
 		} else {
 			termAndCondition1.click();
-			 ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Proposer I Agree Checkbox is Not Enable");
+			 // ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Proposer I Agree Checkbox is Not Enable");
 		}
 
 	}
@@ -1250,7 +1250,7 @@ public class CustomerProfile extends TestBase {
 	            	 Allure.step ("Middle Name TextFields Is Not Display");
 	             }
 	     	}catch(NoSuchElementException e) {
-	     		ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Unable To Locate Element  Middle TextField");
+	     		// ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Unable To Locate Element  Middle TextField");
 	    	}
 	    	
 	    }
@@ -1287,7 +1287,7 @@ public class CustomerProfile extends TestBase {
 //	            Allure.step( "Click On Is proposer And Insured Are Diffrent");
 //				
 //			}else {
-//				ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Is Proposer And Insured Are Same Element Is Not Display");
+//				// ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Is Proposer And Insured Are Same Element Is Not Display");
 //			}
 //			
 //		}
