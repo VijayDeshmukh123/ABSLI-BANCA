@@ -44,7 +44,13 @@ public class BasePage {
 
 
                 case "web":
-                setDriver_Local();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless");
+
+                    // Instantiate ChromeDriver with options
+                    driver.set(new ChromeDriver(options));
+                    //WebDriver driver = new ChromeDriver(options);
+                    // setDriver_Local();
                 break;
 
                 case "lambda":
