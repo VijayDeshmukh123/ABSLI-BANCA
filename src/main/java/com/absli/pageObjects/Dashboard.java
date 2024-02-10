@@ -67,7 +67,7 @@ public class Dashboard extends TestBase {
     }
     public void clickNewCustomerButton(){
        
-        wait.waitForElementToBeVisibleweb(getDriver(), newCustomerBtn, 30, "Element is Not Visible");
+       // wait.waitForElementToBeVisibleweb(getDriver(), newCustomerBtn, 30, "Element is Not Visible");
         if(newCustomerBtn.isDisplayed()){
             newCustomerBtn.click();
         // .log(Status.INFO, "Click On New Customer Button");
