@@ -140,6 +140,7 @@ public class TestBase extends BasePage {
     @BeforeClass
     public void preSetup() throws IOException, InterruptedException {
         BasePage.setDriver();
+        System.out.println("Browser launch successfully");
         Thread.sleep(6000);
         System.out.println("Browser setup by Thread " + Thread.currentThread().getId() + " and Driver reference is : " + BasePage.getDriver());
         getDriver().get(prop.getProperties("Url"));
