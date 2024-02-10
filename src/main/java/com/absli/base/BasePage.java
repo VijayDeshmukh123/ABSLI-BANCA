@@ -58,9 +58,12 @@ public class BasePage {
 
 //                    ChromeOptions options = new ChromeOptions();
 //                    options.addArguments("--headless");
-
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless"); // Optional: run in headless mode
+                    WebDriver chromeDriver = new ChromeDriver(options);
+                    driver.set(chromeDriver);
                     // Instantiate ChromeDriver with options
-                   driver.set(new ChromeDriver());
+                  // driver.set(new ChromeDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
