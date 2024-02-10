@@ -40,6 +40,13 @@
         <log4j-version>2.19.0</log4j-version>
         <extentreports-version>5.0.8</extentreports-version>
         <allure-testng-version>2.13.9</allure-testng-version>
+
+        <browserProperty>chrome</browserProperty>
+        <webdriver.version>3.141.59</webdriver.version>
+
+        <!-- Browser binary paths -->
+        <chrome.binary.path>/path/to/chrome</chrome.binary.path>
+        <firefox.binary.path>/path/to/firefox</firefox.binary.path>
     </properties>
 
 
