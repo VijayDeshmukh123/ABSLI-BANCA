@@ -48,7 +48,7 @@ public class BasePage {
 //                    options.addArguments("headless");
 //                    options.addArguments("window-size=1920,1080");
 //                    driver.set(new ChromeDriver(options));
-                   driver.set(new ChromeDriver());
+                    driver.set(new FirefoxDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
