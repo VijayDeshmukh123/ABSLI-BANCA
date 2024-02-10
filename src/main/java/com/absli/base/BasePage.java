@@ -4,7 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -19,7 +19,7 @@ import java.util.HashSet;
 import Utils.ExcelUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.slf4j.Logger;
@@ -44,24 +44,7 @@ public class BasePage {
 
 
                 case "web":
-                    //driver.set(new FirefoxDriver());
-//                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("headless");
-//                    options.addArguments("window-size=1920,1080");
-//                    driver.set(new ChromeDriver(options));
-                   // WebDriver driver = new ChromeDriver(option);
-                   // WebDriverManager.chromedriver().setup();
-                    //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
 
-                    // Instantiate ChromeDriver
-                  //  WebDriver driver = new ChromeDriver();
-
-
-//                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("--headless"); // Optional: run in headless mode
-//                    WebDriver chromeDriver = new ChromeDriver(options);
-                   // driver.set(chromeDriver);
-                    // Instantiate ChromeDriver with options
                    driver.set(new ChromeDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
@@ -119,7 +102,7 @@ public class BasePage {
         } else if (parameterName.equalsIgnoreCase("web")) {
             driver.set(new ChromeDriver());
         } else if (parameterName.equalsIgnoreCase("Safari")) {
-            WebDriverManager.safaridriver().setup();
+
             driver.set(new SafariDriver());
         }
 

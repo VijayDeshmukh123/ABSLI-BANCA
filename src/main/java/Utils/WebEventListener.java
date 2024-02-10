@@ -16,13 +16,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.WebDriverEventListener;
+//import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import java.io.IOException;
 
 
 
-public class WebEventListener extends TestBase implements WebDriverEventListener {
+public class WebEventListener extends TestBase  {
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
 		System.out.println("Before navigating to: '" + url + "'");
