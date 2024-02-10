@@ -44,11 +44,12 @@ public class BasePage {
 
 
                 case "web":
+                    driver.set(new ChromeDriver());
 //                    ChromeOptions options = new ChromeOptions();
 //                    options.addArguments("headless");
 //                    options.addArguments("window-size=1920,1080");
 //                    driver.set(new ChromeDriver(options));
-                    driver.set(new FirefoxDriver());
+                  //  driver.set(new FirefoxDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
@@ -61,8 +62,8 @@ public class BasePage {
 
                 Date dt = new Date();
                 browserOptions = new ChromeOptions();
-                browserOptions.setPlatformName("Windows 10");
-                browserOptions.setBrowserVersion("121.0");
+//                browserOptions.setPlatformName("Windows 10");
+//                browserOptions.setBrowserVersion("121.0");
                 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
                 ltOptions.put("username", "robin.bhogal");
                 ltOptions.put("accessKey", "S65g9VlO0tz2gRkBUCJjb0dNJbNMy6PsgmIKzcOrzUNLxIKDqZ");

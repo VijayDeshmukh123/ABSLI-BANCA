@@ -10,12 +10,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.given;
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.util.HashMap;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 //import dev.failsafe.internal.util.Assert;
 
