@@ -44,12 +44,12 @@ public class BasePage {
 
 
                 case "web":
-                   // driver.set(new ChromeDriver());
-//                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("headless");
-//                    options.addArguments("window-size=1920,1080");
-//                    driver.set(new ChromeDriver(options));
-                    driver.set(new FirefoxDriver());
+                    driver.set(new ChromeDriver());
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("headless");
+                    options.addArguments("window-size=1920,1080");
+                    driver.set(new ChromeDriver(options));
+                  //  driver.set(new FirefoxDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
