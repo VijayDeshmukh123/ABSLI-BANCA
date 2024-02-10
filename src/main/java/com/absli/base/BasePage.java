@@ -36,7 +36,7 @@ public class BasePage {
     protected static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
     public static String parameterName;
 
-    static void setDriver() throws IOException {
+    public static void setDriver() throws IOException {
 
         parameterName = ExcelUtils.getPlatformNameFromExcel(prop.getProperties("testExcelSheet"), "controller");
 
@@ -56,14 +56,13 @@ public class BasePage {
                     // Instantiate ChromeDriver
                   //  WebDriver driver = new ChromeDriver();
 
+
 //                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("--headless");
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless"); // Optional: run in headless mode
-                    WebDriver chromeDriver = new ChromeDriver(options);
-                    driver.set(chromeDriver);
+//                    options.addArguments("--headless"); // Optional: run in headless mode
+//                    WebDriver chromeDriver = new ChromeDriver(options);
+                   // driver.set(chromeDriver);
                     // Instantiate ChromeDriver with options
-                  // driver.set(new ChromeDriver());
+                   driver.set(new ChromeDriver());
                     //WebDriver driver = new ChromeDriver(options);
                     // setDriver_Local();
                 break;
