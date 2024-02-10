@@ -62,6 +62,7 @@ public class TestBase extends BasePage {
     public static WaitUtils wait;
     ApiData_DCB api;
     IARPage IARpage;
+
     public TestBase() {
         try {
             prop = new PropertiesUtils();
@@ -72,7 +73,6 @@ public class TestBase extends BasePage {
             e.printStackTrace();
         }
     }
-
 
 
     @BeforeMethod
@@ -101,13 +101,12 @@ public class TestBase extends BasePage {
         documentpage = new DocumentsPage(getDriver());
         nriMandate = new ProposerNRIMandate(getDriver());
         insurerNriMandate = new InsurerNRIMandate(getDriver());
-        commonUtils =new CommonUtils();
-        IARpage=new IARPage(getDriver());
-        
-        wait=new WaitUtils();
-        api=new ApiData_DCB();
-    }
+        commonUtils = new CommonUtils();
+        IARpage = new IARPage(getDriver());
 
+        wait = new WaitUtils();
+        api = new ApiData_DCB();
+    }
 
 
 //	@BeforeTest
@@ -123,11 +122,23 @@ public class TestBase extends BasePage {
 //
 
 
+//    public static void initialization() throws IOException, InterruptedException {
+//
+//        BasePage.setDriver();
+//        Thread.sleep(6000);
+//        System.out.println("Browser setup by Thread " + Thread.currentThread().getId() + " and Driver reference is : " + BasePage.getDriver());
+//        getDriver().get(prop.getProperties("Url"));
+//        Thread.sleep(6000);
+//        System.out.println("Title printed by Thread " + Thread.currentThread().getId() + " - " + BasePage.getDriver().getTitle() + " on driver reference " + BasePage.getDriver());
+//        BasePage.getDriver().manage().deleteAllCookies();
+//        BasePage.getDriver().manage().window().maximize();
+//        Thread.sleep(3000);
+//
+//    }
 
 
-
-    public static void initialization() throws IOException, InterruptedException {
-
+    @BeforeClass
+    public void preSetup() throws IOException, InterruptedException {
         BasePage.setDriver();
         Thread.sleep(6000);
         System.out.println("Browser setup by Thread " + Thread.currentThread().getId() + " and Driver reference is : " + BasePage.getDriver());
@@ -137,34 +148,28 @@ public class TestBase extends BasePage {
         BasePage.getDriver().manage().deleteAllCookies();
         BasePage.getDriver().manage().window().maximize();
         Thread.sleep(3000);
-
     }
 
 
-    @BeforeClass
-    public void preSetup() throws IOException, InterruptedException {
-        initialization();
-    }
+//    @AfterTest
+//    public void endReport() {
+//        extent.flush();
+//
+//    }
+/////*
+//        @AfterMethod public void tearDown() {
+//            BasePage.getDriver().quit();
+//        }
+//*/
 
-
-    @AfterTest
-    public void endReport() {
-        extent.flush();
-
-    }
-/*
-        @AfterMethod public void tearDown() {
-            BasePage.getDriver().quit();
-        }
-*/
-
-    public  String failedWeb(String screenshotName) throws IOException {
-        //this.driver=driver;
-        String dateName=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        File scrFile=((TakesScreenshot)BasePage.getDriver()).getScreenshotAs(OutputType.FILE);
-        String destination= System.getProperty("user.dir")+"/FailedTestsScreenshots/"+ screenshotName +
-                dateName+".png";
-        FileUtils.copyFile(scrFile, new File(destination));
-
-        return destination;
-    }}
+//    public  String failedWeb(String screenshotName) throws IOException {
+//        //this.driver=driver;
+//        String dateName=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//        File scrFile=((TakesScreenshot)BasePage.getDriver()).getScreenshotAs(OutputType.FILE);
+//        String destination= System.getProperty("user.dir")+"/FailedTestsScreenshots/"+ screenshotName +
+//                dateName+".png";
+//        FileUtils.copyFile(scrFile, new File(destination));
+//
+//        return destination;
+//    }}
+}
