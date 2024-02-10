@@ -110,17 +110,17 @@ public class TestBase extends BasePage {
 
 
 
-	@BeforeTest
-    public void setExtent() {
-        ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/index.html");
-        reporter.config().setReportName("ABSLI-LEAP Report");
-        reporter.config().setDocumentTitle("TestResults");
-
-        extent = new ExtentReports();
-        extent.attachReporter(reporter);
-        extent.setSystemInfo("QA", "MAYUR BHADANE");
-    }
-
+//	@BeforeTest
+//    public void setExtent() {
+//        ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/index.html");
+//        reporter.config().setReportName("ABSLI-LEAP Report");
+//        reporter.config().setDocumentTitle("TestResults");
+//
+//        extent = new ExtentReports();
+//        extent.attachReporter(reporter);
+//        extent.setSystemInfo("QA", "MAYUR BHADANE");
+//    }
+//
 
 
 

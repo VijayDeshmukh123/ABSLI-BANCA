@@ -36,21 +36,21 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 //import static com.absli.base.TestBase.prop;
-public class TestRunner {
+public class TestRunner extends TestBase{
 
 
 
 
 
-//	public TestRunner() {
-//		super();
-//	}
+	public TestRunner() {
+		super();
+	}
 
 
 	@Test(groups = {"Sanity" }, dataProvider = "EndtoEndProposerSame", dataProviderClass = DataProviders.class, description = "Proposer same Scenario")
 
 	public void CompletesameGMSA(HashMap<String, String> testData) throws Exception {
-		new Inilazation().preSetup();
+
 		new EndtoEndProposerSame().CompletesameScenarioJourney(testData);
 
 	}
