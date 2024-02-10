@@ -26,6 +26,15 @@ public class TestRunner extends TestBase{
 		new EndtoEndProposerSame().CompletesameScenarioJourney(testData);
 
 	}
-	
+
+
+	@Test(groups = {"Sanity" }, dataProvider = "EndtoEndProposerSame", dataProviderClass = DataProviders.class, description = "Proposer same Scenario")
+
+	public void CompletesameGMSB(HashMap<String, String> testData) throws Exception {
+
+		new EndtoEndProposerSame().CompletesameScenarioJourney(testData);
+
+	}
+
 
 }
