@@ -3,7 +3,7 @@ package com.absli.pageObjects;
 import com.absli.Listner.AllureListener;
 import com.absli.base.*;
 
-import com.absli.utils.WaitUtils;
+//import com.absli.utils.waitUtils;
 
 import com.aventstack.extentreports.Status;
 
@@ -24,7 +24,7 @@ import java.io.IOException;
 
 public class PaymentPage extends TestBase {
     public WebDriver driver;
-    public WaitUtils wait;
+   // public // waitUtils // wait;
 
     public PaymentPage(WebDriver driver) {
         PageFactory.initElements(getDriver(), this);
@@ -157,7 +157,7 @@ public class PaymentPage extends TestBase {
     private WebElement CASH_BUTTON;
 
 public void ClickOnCashModeweb() {
-	 wait.waitforElementToBeClickable(getDriver(), CASH_BUTTON, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), CASH_BUTTON, 10);
     if(CASH_BUTTON.isDisplayed()) {
     	CASH_BUTTON.click();
     	Allure.step ("Click Or Select CASH  Payment Mode ");
@@ -182,7 +182,7 @@ public void UploadDECLARATIONFORMImgWEB() throws InterruptedException, IOExcepti
 }
 
 public void ClickOnCashSubmitBTNweb() {
-	 wait.waitforElementToBeClickable(getDriver(), CASH_SUBMIT, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), CASH_SUBMIT, 10);
     if(CASH_SUBMIT.isDisplayed()) {
     	CASH_SUBMIT.click();
    	 Allure.step ("Click on Submit Button On Cash Payment ");
@@ -193,7 +193,7 @@ public void ClickOnCashSubmitBTNweb() {
 
 
 public void ClickDoItLatterOnPaymentweb() {
-	 wait.waitforElementToBeClickable(getDriver(), DOITLATTER, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), DOITLATTER, 10);
     if(DOITLATTER.isDisplayed()) {
     	DOITLATTER.click();
     	 Allure.step  ("Click on Submit Button On OTC Payment ");
@@ -204,7 +204,7 @@ public void ClickDoItLatterOnPaymentweb() {
 
 
 public void ClickOnOTCSubmitBTNweb() {
-	 wait.waitforElementToBeClickable(getDriver(), OTC_SUBMIT, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), OTC_SUBMIT, 10);
     if(OTC_SUBMIT.isDisplayed()) {
     	OTC_SUBMIT.click();
     	 Allure.step ("Click on Submit Button On OTC Payment ");
@@ -215,7 +215,7 @@ public void ClickOnOTCSubmitBTNweb() {
 
 
 public void ClickOnOTCSubmitBTNDCB() {
-	 wait.waitforElementToBeClickable(getDriver(), OTC_SUBMIT1, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), OTC_SUBMIT1, 10);
     if(OTC_SUBMIT1.isDisplayed()) {
     	OTC_SUBMIT1.click();
     	 Allure.step ("Click on Submit Button On OTC Payment ");
@@ -225,7 +225,7 @@ public void ClickOnOTCSubmitBTNDCB() {
 }
 
 public void ClickOnWinBackREDEEMBTNweb() {
-	 wait.waitforElementToBeClickable(getDriver(), REDEEM_BUTTON, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), REDEEM_BUTTON, 10);
     if(REDEEM_BUTTON.isDisplayed()) {
     	REDEEM_BUTTON.click();
     	 Allure.step  ("Click on REDEEM Button On Win Back Payment ");
@@ -235,7 +235,7 @@ public void ClickOnWinBackREDEEMBTNweb() {
 }
 
 public void ClickOnWinBackSaveBTNweb() {
-	 wait.waitforElementToBeClickable(getDriver(), SAVE_BUTTON, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), SAVE_BUTTON, 10);
     if(SAVE_BUTTON.isDisplayed()) {
     	SAVE_BUTTON.click();
     	 Allure.step  ("Click on Save Button On Win Back Payment ");
@@ -245,7 +245,7 @@ public void ClickOnWinBackSaveBTNweb() {
 }
 
 public void EnterAmountOnWinBackWeb(String args) {
-	 wait.waitforElementToBeClickable(getDriver(), policyAmount, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), policyAmount, 10);
 	     if(policyAmount.isDisplayed()) {
 	    	 policyAmount.click();
 	    	 policyAmount.sendKeys(args);
@@ -258,7 +258,7 @@ public void EnterAmountOnWinBackWeb(String args) {
 
 
 public void EnterPolicyNOOnWinBackWeb(String args) {
-	 wait.waitforElementToBeClickable(getDriver(), policyNo, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), policyNo, 10);
 	     if(policyNo.isDisplayed()) {
 	    	 policyNo.click();
 	    	 policyNo.sendKeys(args);
@@ -271,7 +271,7 @@ public void EnterPolicyNOOnWinBackWeb(String args) {
 
 
 public void ClickOnWinBackModeweb() {
-	 wait.waitforElementToBeClickable(getDriver(), WIN_BACK_BUTTON, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), WIN_BACK_BUTTON, 10);
     if(WIN_BACK_BUTTON.isDisplayed()) {
     	WIN_BACK_BUTTON.click();
     	 Allure.step ("Click Or Select CHEQUE / DEMAND DRAFT  Payment Mode ");
@@ -282,7 +282,7 @@ public void ClickOnWinBackModeweb() {
 
 
     public void clickOnSumitBTNECDFweb() throws InterruptedException {
-    	 wait.waitforElementToBeClickable(getDriver(), eCDFSUBMITbutton, 10);
+    	 // wait.// waitforElementToBeClickable(getDriver(), eCDFSUBMITbutton, 10);
         if(eCDFSUBMITbutton.isDisplayed()) {
         	eCDFSUBMITbutton.click();
         	 Allure.step ("Click on Submit Button ");
@@ -294,7 +294,7 @@ public void ClickOnWinBackModeweb() {
 
     
 //    public void clickOnCheckBoxECDFweb() throws InterruptedException {
-//    	 wait.waitforElementToBeClickable(getDriver(), eCDFyesToAll, 10);
+//    	 // wait.// waitforElementToBeClickable(getDriver(), eCDFyesToAll, 10);
 //        if(eCDFyesToAll.isEnabled()) {
 //        	eCDFyesToAll.click();
 //        	 Allure.step ("Click On ECDF Checkbox ");
@@ -306,7 +306,7 @@ public void ClickOnWinBackModeweb() {
     
     public void clickOnCheckBoxECDFweb() throws InterruptedException {
         WebElement identityBTN=getDriver().findElement(By.xpath("//input[@id='yesToAll']"));
-       // waitUtils.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), identityBTN, 20, "Element is Not Display");
+       // // waitUtils.// waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), identityBTN, 20, "Element is Not Display");
         if(identityBTN.isEnabled()) {
         	identityBTN.click();
           // // .log(Status.INFO, "Click On ECDF Checkbox ");
@@ -317,15 +317,15 @@ public void ClickOnWinBackModeweb() {
     }
     
     public void UploadChequeAndDDImgweb() throws InterruptedException{
-    	 wait.waitforElementToBeClickable(getDriver(), uploadcheque, 20);
+    	 // wait.// waitforElementToBeClickable(getDriver(), uploadcheque, 20);
         String destination = System.getProperty("user.dir") + "//Document//download.jpg";
-        wait.WaitTime(2);
+        // wait.// waitTime(2);
         uploadcheque.sendKeys(destination);
-        Allure.step( "Failed to upload file...Upload Button is not Display");
+        Allure.step( " upload file Success...Upload Button is  Display");
     }
 
 public void ClickDDBTNweb() throws InterruptedException {
-	 wait.waitforElementToBeClickable(getDriver(), DDBTN, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), DDBTN, 10);
 	if(DDBTN.isDisplayed()) {
 	   DDBTN.click();
        // .log(Status.INFO, "Click   On CDD Payment ");
@@ -336,7 +336,7 @@ public void ClickDDBTNweb() throws InterruptedException {
 
 
 public void ClickChequeBTNweb() throws InterruptedException {
-	 wait.waitforElementToBeClickable(getDriver(), ChequeBTN, 10);
+	 // wait.// waitforElementToBeClickable(getDriver(), ChequeBTN, 10);
 	if(ChequeBTN.isDisplayed()) {
 		ChequeBTN.click();
        // .log(Status.INFO, "Click   On cheque button  ");
@@ -345,7 +345,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
    }
 }
     public void EnterChequeDDNoWeb(String ChequeDDNo) {
-        wait.waitForElementToBeVisibleweb(getDriver(), cheqddno, 20, "Element is Not Display");
+         wait. waitForElementToBeVisibleweb(getDriver(), cheqddno, 20, "Element is Not Display");
         if(cheqddno.isDisplayed()) {
             cheqddno.sendKeys(ChequeDDNo);
             Allure.step("Enter Cheque No OR DD No As=====>"+ChequeDDNo);
@@ -354,7 +354,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void EnterJounralNoWeb(String ChequeDDNo) {
-        wait.waitForElementToBeVisibleweb(getDriver(), JournalNo, 20, "Element is Not Display");
+         wait. waitForElementToBeVisibleweb(getDriver(), JournalNo, 20, "Element is Not Display");
         if(JournalNo.isDisplayed()) {
         	JournalNo.sendKeys(ChequeDDNo);
             Allure.step("Enter Jouranal No As=====>"+ChequeDDNo);
@@ -364,13 +364,13 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void EnterDDMMYYONCDDWeb(String CDDday,String CDDMonth,String CDDYear ) throws InterruptedException {
-        wait.waitforElementToBeClickable(getDriver(), cheqddday, 10);
+        // wait.// waitforElementToBeClickable(getDriver(), cheqddday, 10);
         Thread.sleep(2000);
         cheqddday.click();
         cheqddday.sendKeys(CDDday);
         Allure.step( "Enter Cheque Date On(day) As=====> "+CDDday);
         Thread.sleep(2000);
-        wait.waitforElementToBeClickable(getDriver(),cheddmonth,100);
+        // wait.// waitforElementToBeClickable(getDriver(),cheddmonth,100);
         Thread.sleep(2000);
         cheddmonth.click();
         cheddmonth.sendKeys(CDDMonth);
@@ -382,13 +382,13 @@ public void ClickChequeBTNweb() throws InterruptedException {
         Thread.sleep(2000);
     }
     public void EnterDDMMYYONjournalWeb(String CDDday,String CDDMonth,String CDDYear ) throws InterruptedException {
-        wait.waitforElementToBeClickable(getDriver(), cheqddday1, 10);
+        // wait.// waitforElementToBeClickable(getDriver(), cheqddday1, 10);
         Thread.sleep(2000);
         cheqddday1.click();
         cheqddday1.sendKeys(CDDday);
         Allure.step( "Enter Jouranal Date on (day) As=====> "+CDDday);
         Thread.sleep(2000);
-        wait.waitforElementToBeClickable(getDriver(),cheddmonth1,100);
+        // wait.// waitforElementToBeClickable(getDriver(),cheddmonth1,100);
         Thread.sleep(2000);
         cheddmonth1.click();
         cheddmonth1.sendKeys(CDDMonth);
@@ -401,7 +401,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void EnterIFSCCodeOnCDDWeb(String CDDIFSCcode) throws InterruptedException {
-        wait.waitForElementToBeVisibleweb(getDriver(), cheqddifsc, 20, "Element is Not Display");
+         wait. waitForElementToBeVisibleweb(getDriver(), cheqddifsc, 20, "Element is Not Display");
         if(cheqddifsc.isDisplayed()) {
             cheqddifsc.click();
             Thread.sleep(1000);
@@ -422,7 +422,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void Nextbutton() {
-        wait.waitForElementToBeVisibleweb(getDriver(), nextbutton, 10, "Element is Not Display");
+         wait. waitForElementToBeVisibleweb(getDriver(), nextbutton, 10, "Element is Not Display");
         if (nextbutton.isEnabled()) {
             nextbutton.click();
             Allure.step("Clicked on next button on payment");
@@ -431,7 +431,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void NEXTbutton() {
-        wait.waitForElementToBeVisibleweb(getDriver(), NEXTbutton, 10, "Element is Not Display");
+        wait. waitForElementToBeVisibleweb(getDriver(), NEXTbutton, 10, "Element is Not Display");
         if (NEXTbutton.isEnabled()) {
         	NEXTbutton.click();
             Allure.step("Clicked on next button on payment");
@@ -447,7 +447,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void ClickOnChequeAndDDModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), cheqddtab, 20, "Element is Not Display");
+         wait. waitForElementToBeVisibleweb(getDriver(), cheqddtab, 20, "Element is Not Display");
         if(cheqddtab.isDisplayed()) {
             cheqddtab.click();
             Allure.step("Click Or Select CHEQUE / DEMAND DRAFT  Payment Mode ");
@@ -457,7 +457,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
     
     public void ClickOnBranchdepositDropDown(String val) throws InterruptedException {
-//    	   wait.waitForElementToBeVisibleweb(getDriver(), SelectBranchDropDown, 10, "Element is Not Display");
+//    	   // // wait.// // waitForElementToBeVisibleweb(getDriver(), SelectBranchDropDown, 10, "Element is Not Display");
 //    	 if (SelectBranchDropDown.isDisplayed()) {
 //    		 SelectBranchDropDown.click();
 //             Allure.step("Clicked on Select Branch DropDown button on Payment");
@@ -467,7 +467,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     	
     	
       //  WebElement PaymentBTN=getDriver().findElement(By.xpath("//input[contains(@value,'"+val +"')]"));
-        wait.waitForElementToBeVisibleweb(getDriver(), SelectBranchDropDown, 10, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), SelectBranchDropDown, 10, "Element is Not Display");
         if(SelectBranchDropDown.isDisplayed()) {
         	SelectBranchDropDown.sendKeys(val);
 			 Thread.sleep(2000);
@@ -479,7 +479,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickpaymentDoitLaterbutton() {
-        wait.waitForElementToBeVisibleweb(getDriver(), paydoitlater, 10, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), paydoitlater, 10, "Element is Not Display");
         if (paydoitlater.isDisplayed()) {
             paydoitlater.click();
             Allure.step("Clicked on do it later button on Payment");
@@ -491,7 +491,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     ///////////////////////////// Fund Transfer /////////////////////////////////////////////////////////
 
     public void ClickOnFundTransferModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), fundft, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), fundft, 20, "Element is Not Display");
         if(fundft.isDisplayed()) {
             fundft.click();
             Allure.step("Click On Fund Transfer Payment Mode ");
@@ -502,13 +502,13 @@ public void ClickChequeBTNweb() throws InterruptedException {
 
     public void UploadFundtransferImgweb() throws InterruptedException{
         String destination = System.getProperty("user.dir") + "//Document//download.jpg";
-        wait.WaitTime(2);
+        // wait.// waitTime(2);
         uploadFTimg.sendKeys(destination);
         Allure.step( "Failed to upload file...Upload Button is not Display");
     }
 
     public void EnterpolicyNumberFTWeb(String PolicyNumber) {
-        wait.waitForElementToBeVisibleweb(getDriver(), ftpolicy, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), ftpolicy, 20, "Element is Not Display");
         if(ftpolicy.isDisplayed()) {
             ftpolicy.click();
             ftpolicy.sendKeys(PolicyNumber);
@@ -518,7 +518,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void EnterAmountFTWeb(String BalamountValue) {
-        wait.waitForElementToBeVisibleweb(getDriver(), ftamount, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), ftamount, 20, "Element is Not Display");
         if(ftamount.isDisplayed()) {
             ftamount.click();
             ftamount.sendKeys(BalamountValue);
@@ -528,7 +528,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnFTsavebuttonweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), fundsave, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), fundsave, 20, "Element is Not Display");
         if(fundsave.isDisplayed()) {
             fundsave.click();
             Allure.step("Click On Fund Transfer Save Button");
@@ -537,7 +537,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnFTredeembuttonweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), fundredeem, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), fundredeem, 20, "Element is Not Display");
         if(fundredeem.isDisplayed()) {
             fundredeem.click();
             Allure.step("Click On Fund Transfer REDEEM Button");
@@ -547,7 +547,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 //======================================NetBanking Vijay=================
     public void ClickOnNetBankingModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), NetBanking, 5, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), NetBanking, 5, "Element is Not Display");
         if(NetBanking.isDisplayed()) {
         	NetBanking.click();
             Allure.step("Click Or Select Net Banking  Payment Mode ");
@@ -557,7 +557,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void ClickOnCreditCardModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), CreditCard, 5, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), CreditCard, 5, "Element is Not Display");
         if(CreditCard.isDisplayed()) {
         	CreditCard.click();
             Allure.step("Click Or Select Credit card Payment Mode ");
@@ -566,7 +566,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnDebitCardModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), DebitCard, 5, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), DebitCard, 5, "Element is Not Display");
         if(DebitCard.isDisplayed()) {
         	DebitCard.click();
             Allure.step("Click Or SelectDebit card Payment Mode ");
@@ -575,7 +575,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnPaymentPayNowBTNweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), PayNowBTN, 5, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), PayNowBTN, 5, "Element is Not Display");
         if(PayNowBTN.isDisplayed()) {
         	PayNowBTN.click();
             Allure.step("Click Or SelectDebit card Payment Mode ");
@@ -585,7 +585,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void ClickOnRTGSModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), RtgsButton, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), RtgsButton, 20, "Element is Not Display");
         if(RtgsButton.isDisplayed()) {
         	RtgsButton.click();
             Allure.step("Click Or Select RTGS  Payment Mode ");
@@ -594,7 +594,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnDirectDebitweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), DirectDebit, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), DirectDebit, 20, "Element is Not Display");
         if(DirectDebit.isDisplayed()) {
         	DirectDebit.click();
             Allure.step("Click Or Select Direct Debit  Payment Mode ");
@@ -603,7 +603,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnOTCModeweb() {
-        wait.waitForElementToBeVisibleweb(getDriver(), OTCBtn, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), OTCBtn, 20, "Element is Not Display");
         if(OTCBtn.isDisplayed()) {
         	OTCBtn.click();
             Allure.step("Click Or Select OTC  Payment Mode ");
@@ -612,7 +612,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickOnOTCModeDCB() {
-        wait.waitForElementToBeVisibleweb(getDriver(), OTCBtnDCB, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), OTCBtnDCB, 20, "Element is Not Display");
         if(OTCBtnDCB.isDisplayed()) {
         	OTCBtnDCB.click();
             Allure.step("Click Or Select OTC  Payment Mode ");
@@ -622,7 +622,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
     public void clickOnRTGSCheckboxWeb() {
     	
-    	 wait.waitForElementToBeVisibleweb(getDriver(), RtgsChechBox, 20, "Element is Not Display");
+    	 // wait.// waitForElementToBeVisibleweb(getDriver(), RtgsChechBox, 20, "Element is Not Display");
 		if (RtgsChechBox.isEnabled()) {
 			RtgsChechBox.click();
 			 Allure.step( "Click on RTGS Checkbox");
@@ -632,7 +632,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 
 	}
     public void clickOnRTGSpaymentSubmitBTNWeb() {
-   	 wait.waitForElementToBeVisibleweb(getDriver(), RtgsSubmitBTN, 20, "Element is Not Display");
+   	 // wait.// waitForElementToBeVisibleweb(getDriver(), RtgsSubmitBTN, 20, "Element is Not Display");
 		if (RtgsSubmitBTN.isDisplayed()) {
 			
 			RtgsSubmitBTN.click();
@@ -644,7 +644,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 
 	}
     public void ClickonChequeBelongtoThirdParty() throws InterruptedException {
-    	wait.waitForElementToBeVisibleweb(getDriver(), tpdBTN, 20, "Element is Not Display");
+    	// wait.// waitForElementToBeVisibleweb(getDriver(), tpdBTN, 20, "Element is Not Display");
         if(tpdBTN.isDisplayed()) {
         	tpdBTN.click();
            Allure.step("Click on TPD yes btn On CDD Payment ");
@@ -653,7 +653,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void ClickonSubmitBtnAlertPopup() throws InterruptedException {
-     	wait.waitForElementToBeVisibleweb(getDriver(), AlertPop, 20, "Element is Not Display");
+     	// wait.// waitForElementToBeVisibleweb(getDriver(), AlertPop, 20, "Element is Not Display");
          if(AlertPop.isDisplayed()) {
         	 AlertPop.click();
             Allure.step("Click on TPD yes btn On CDD Payment ");
@@ -676,7 +676,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
 
 
     public void ClickonSdummypaymethod() throws InterruptedException {
-        wait.waitForElementToBeVisibleweb(getDriver(), dummypayment, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), dummypayment, 20, "Element is Not Display");
         if(dummypayment.isDisplayed()) {
             dummypayment.click();
             Allure.step("Click on Dummy payment Option");
@@ -686,7 +686,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
     }
 
     public void Clickoniherbyinformcheckbox() throws InterruptedException {
-        wait.waitForElementToBeVisibleweb(getDriver(), herbycheck, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), herbycheck, 20, "Element is Not Display");
         if(herbycheck.isDisplayed()) {
             herbycheck.click();
             Allure.step("Click on I hereby confirm that I am the policy owner and declare that the premium of this policy is being paid from the income earned from legitimate funds and from a bank account/credit card which belongs to me. I understand and agree that this is a regulatory requirement checkbox");
@@ -695,7 +695,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void Clickononlinesubmitbutton() throws InterruptedException {
-        wait.waitForElementToBeVisibleweb(getDriver(), onlsubmitbtn, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), onlsubmitbtn, 20, "Element is Not Display");
         if(onlsubmitbtn.isDisplayed()) {
             onlsubmitbtn.click();
             Allure.step("Click on Submit Button");
@@ -704,7 +704,7 @@ public void ClickChequeBTNweb() throws InterruptedException {
         }
     }
     public void Clickonpaynowbutton() throws InterruptedException {
-        wait.waitForElementToBeVisibleweb(getDriver(), paynowbtn, 20, "Element is Not Display");
+        // wait.// waitForElementToBeVisibleweb(getDriver(), paynowbtn, 20, "Element is Not Display");
         if(paynowbtn.isDisplayed()) {
             paynowbtn.click();
             Allure.step("Click on Pay Now Button");

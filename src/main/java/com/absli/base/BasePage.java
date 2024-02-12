@@ -49,7 +49,7 @@ public class BasePage {
                     //options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 //                    options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 //                    // options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-                  // driver.set(new ChromeDriver());
+                 //  driver.set(new ChromeDriver());
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("headless");
                     options.addArguments("window-size=1920,1080");
