@@ -13,6 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,9 +45,12 @@ public class BasePage {
 
 
                 case "web":
-                    driver.set(new ChromeDriver());
-//                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("headless");
+
+                    //options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+//                    options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+//                    // options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+                   driver.set(new ChromeDriver());
+////                    options.addArguments("headless");
 //                    options.addArguments("window-size=1920,1080");
 //                    driver.set(new ChromeDriver(options));
                   //  driver.set(new FirefoxDriver());
@@ -62,8 +66,8 @@ public class BasePage {
 
                 Date dt = new Date();
                 browserOptions = new ChromeOptions();
-//                browserOptions.setPlatformName("Windows 10");
-//                browserOptions.setBrowserVersion("121.0");
+                browserOptions.setPlatformName("Windows 10");
+                browserOptions.setBrowserVersion("121.0");
                 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
                 ltOptions.put("username", "robin.bhogal");
                 ltOptions.put("accessKey", "S65g9VlO0tz2gRkBUCJjb0dNJbNMy6PsgmIKzcOrzUNLxIKDqZ");
