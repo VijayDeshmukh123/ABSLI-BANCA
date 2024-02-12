@@ -7,7 +7,7 @@
         <listener class-name="com.absli.Listner.CustomListner"/>
     </listeners>
 
-  <test name="Suite Test1">
+  <test name="Suite Test2">
         <classes>
             <class name="com.absli.testcases.TestRunner">
                 <methods>
