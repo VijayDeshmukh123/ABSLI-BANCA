@@ -109,267 +109,311 @@ public class PaymentModule {
 		prop = new PropertiesUtils();
 		softassert = new SoftAssert();
 		healthandpuretermspage = new HealthAndPureTermsPage(getDriver());
-		  IARpage=new IARPage(getDriver());
-		  
-		
-		 if (testData.get("IsPayment").equalsIgnoreCase("YES")) {
+		IARpage=new IARPage(getDriver());
 
-	            if (testData.get("PaymentType").equalsIgnoreCase("chequeDD")) {
 
-	            	 if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
-		                	
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackModeweb();
-		                    wait.WaitTime2();
-		                    for(int j=0;j<=1;j++) {
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
-		                    wait.WaitTime2();
-		                    paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
-		                    wait.WaitTime2();
-		                	if(j==0) {
-		                    paymentpage.ClickOnWinBackSaveBTNweb();
-		                    wait.WaitTime2();
-		                	}
-		                	}
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackREDEEMBTNweb();
-		                    wait.WaitTime2();
-		                    TestUtil.scrollTillTOPOfPage(driver);
+		if (testData.get("IsPayment").equalsIgnoreCase("YES")) {
+			if (testData.get("ChannelName").equalsIgnoreCase("BOM")) {
 
-		                }
+				if (testData.get("PaymentType").equalsIgnoreCase("DirectDebit")) {
 
-	                paymentpage.ClickOnChequeAndDDModeweb();
+					paymentpage.ClickOnDirectDebitweb();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					WebElement ele=getDriver().findElement(By.xpath("(//span[contains(text(),'Submit')])[1]"));
+					TestUtil.scrollToElement(driver, ele);
+					paymentpage.UploadChequeAndDDImgweb();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					paymentpage.EnterJounralNoWeb(testData.get("ChequeDDNo"));
+					wait.WaitTime2();
+					paymentpage.EnterDDMMYYONjournalWeb(testData.get("CDDday"), testData.get("CDDMonth"),testData.get("CDDYear"));
+					paymentpage.clickOnRTGSpaymentSubmitBTNWeb();
+					Thread.sleep(5000);
+					TestUtil.scrollTillEndOfPage(driver);
+					customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+					dashboard.checkLoaderWeb();
+					Thread.sleep(4000);
+					try {customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+						dashboard.checkLoaderWeb();}catch(Exception e) {
 
-	                if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Cheque")) {
+					}
 
-	                    wait.WaitTime2();
-	                    wait.WaitTime2();
-	                    //TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//div[contains(text(),'CASH')]")));
-	                    paymentpage.UploadChequeAndDDImgweb();
-	                    wait.WaitTime2();
-	                    paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
-	                    paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
-	                   // paymentpage.VarifyINCORRECTIFSCCodeOnCDDWeb();
-	                    wait.WaitTime2();
-	                    paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
-	                    dashboard.checkLoaderWeb();
-	                    wait.WaitTime2();
-	                    paymentpage.ClickCDDPaymentSubmitBTNweb();
-	                    dashboard.checkLoaderWeb();
-	                    wait.WaitTime2();
-	                    WebElement PlainEle1 =getDriver().findElement(By.xpath("(//div[contains(@class,'upper-case text-style-1')])[1]"));
-	                    String PlainEle1Value2 = PlainEle1.getText();
-	                    TestUtil.verifybgColor(PlainEle1, driver);
-	                    String[] PlainEle1Value2update = PlainEle1Value2.split(": ");
-	                    String SelectPlanUpdate = testData.get("SelectPlan").toUpperCase();
-	                    softassert.assertEquals(PlainEle1Value2update[1], SelectPlanUpdate);
+				}
 
-	                    WebElement PremiumAmountEle2 = getDriver().findElement(By.xpath("(//div[contains(@class,'amount')])[1]"));
-	                    String PremiumAmountEle2Value2 = PremiumAmountEle2.getText();
-	                    TestUtil.verifybgColor(PremiumAmountEle2, driver);
-	                    String[] PremiumAmountEle2Value2update = PremiumAmountEle2Value2.split("s.");
-	                  //  softassert.assertEquals(PremiumAmountEle2Value2update[1], InitialPremiumAmountValue1);
+			}
 
-	                    WebElement CurrentDateEle1 = getDriver().findElement(By.xpath("(//div[contains(@class,'payment-details-value')])[2]"));
-	                    String CurrentDateEle1Value = CurrentDateEle1.getText();
-	                    TestUtil.verifybgColor(CurrentDateEle1, driver);
-	                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-	                    LocalDateTime now = LocalDateTime.now();
-	                    String CurrentDateEle2 = dtf.format(now);
-	                    softassert.assertEquals(CurrentDateEle1Value, CurrentDateEle2);
-	                    paymentpage.Nextbutton();
-	                    dashboard.checkLoaderWeb();
-	                    wait.WaitTime2();
 
-	                } else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Demand Draft")) {
-	                    wait.WaitTime2();
-	                    paymentpage.ClickDDBTNweb();
-	                    wait.WaitTime2();
-	                    paymentpage.UploadChequeAndDDImgweb();
-	                    wait.WaitTime2();
-	                    //TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
-	                    paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
-	                    wait.WaitTime2();
-	                    paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
-	                    paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
-	                    wait.WaitTime2();
-	                    //TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
-	                    paymentpage.UploadDECLARATIONFORMImgWEB();
-	                    wait.WaitTime2();
-	                    paymentpage.ClickCDDPaymentSubmitBTNweb();
-	                    dashboard.checkLoaderWeb();
-	                    wait.WaitTime2();
-	                    TestUtil.scrollTillTOPOfPage(getDriver());
-	                    wait.WaitTime2();
-	                    paymentpage.Nextbutton();
-	                    dashboard.checkLoaderWeb();
-	                    wait.WaitTime2();
-	                    wait.WaitTime2();
-	                }
-	            }
 
-	            if (testData.get("PaymentType").equalsIgnoreCase("cash")) {
+			if (testData.get("PaymentType").equalsIgnoreCase("chequeDD")) {
 
-	            	 if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
-		                	
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackModeweb();
-		                    wait.WaitTime2();
-		                    for(int j=0;j<=0;j++) {
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
-		                    wait.WaitTime2();
-		                    paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
-		                    wait.WaitTime2();
-		                	if(j==0) {
-		                    paymentpage.ClickOnWinBackSaveBTNweb();
-		                    wait.WaitTime2();
-		                	}
-		                	}
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackREDEEMBTNweb();
-		                    wait.WaitTime2();
-		                    TestUtil.scrollTillTOPOfPage(driver);
+				if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
 
-		                }
-
-	                paymentpage.ClickOnCashModeweb();
-
-	                Thread.sleep(2000);
-	                TestUtil.scrollTillEndOfPage(driver);
-	                Thread.sleep(2000);
-
-	                paymentpage.ClickOnCashSubmitBTNweb();
-	                Thread.sleep(5000);
-
-	                WebElement PlainEle1 =getDriver()
-	                        .findElement(By.xpath("(//div[contains(@class,'upper-case text-style-1')])[1]"));
-	                String PlainEle1Value2 = PlainEle1.getText();
-	                TestUtil.verifybgColor(PlainEle1, driver);
-	                String[] PlainEle1Value2update = PlainEle1Value2.split(":");
-	                softassert.assertEquals(PlainEle1Value2update[1], testData.get("PlanSelectionJourney"));
-
-	                WebElement PremiumAmountEle2 = getDriver()
-	                        .findElement(By.xpath("(//div[contains(@class,'amount')])[1]"));
-	                String PremiumAmountEle2Value2 = PremiumAmountEle2.getText();
-	                TestUtil.verifybgColor(PremiumAmountEle2, driver);
-	                String[] PremiumAmountEle2Value2update = PremiumAmountEle2Value2.split("s.");
-	               // softassert.assertEquals(PremiumAmountEle2Value2update[1], InitialPremiumAmountValue1);
-
-	                WebElement CurrentDateEle1 = getDriver().findElement(By.xpath("(//div[contains(@class,'payment-details-value')])[2]"));
-	                String CurrentDateEle1Value = CurrentDateEle1.getText();
-	                TestUtil.verifybgColor(CurrentDateEle1, driver);
-	                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-	                LocalDateTime now = LocalDateTime.now();
-	                String CurrentDateEle2 = dtf.format(now);
-	                softassert.assertEquals(CurrentDateEle1Value, CurrentDateEle2);
-
-	                paymentpage.Nextbutton();
-	                Thread.sleep(4000);
-	            }
-	            if (testData.get("ChannelName").equalsIgnoreCase("DCB")) {
-
-					if (testData.get("PaymentType").equalsIgnoreCase("OTC_DCB")) {
-
-						if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
-
-							TestUtil.scrollTillEndOfPage(driver);
-							paymentpage.ClickOnWinBackModeweb();
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackModeweb();
+					wait.WaitTime2();
+					for(int j=0;j<=1;j++) {
+						TestUtil.scrollTillEndOfPage(driver);
+						paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
+						wait.WaitTime2();
+						paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
+						wait.WaitTime2();
+						if(j==0) {
+							paymentpage.ClickOnWinBackSaveBTNweb();
 							wait.WaitTime2();
-							for (int j = 0; j <= 0; j++) {
-								TestUtil.scrollTillEndOfPage(driver);
-								paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
+						}
+					}
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackREDEEMBTNweb();
+					wait.WaitTime2();
+					TestUtil.scrollTillTOPOfPage(driver);
+
+				}
+
+				paymentpage.ClickOnChequeAndDDModeweb();
+
+				if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Cheque")) {
+
+					wait.WaitTime2();
+					wait.WaitTime2();
+					//TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//div[contains(text(),'CASH')]")));
+					paymentpage.UploadChequeAndDDImgweb();
+					wait.WaitTime2();
+					paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
+					paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
+					// paymentpage.VarifyINCORRECTIFSCCodeOnCDDWeb();
+					wait.WaitTime2();
+					paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					paymentpage.ClickCDDPaymentSubmitBTNweb();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					WebElement PlainEle1 =getDriver().findElement(By.xpath("(//div[contains(@class,'upper-case text-style-1')])[1]"));
+					String PlainEle1Value2 = PlainEle1.getText();
+					TestUtil.verifybgColor(PlainEle1, driver);
+					String[] PlainEle1Value2update = PlainEle1Value2.split(": ");
+					String SelectPlanUpdate = testData.get("SelectPlan").toUpperCase();
+					softassert.assertEquals(PlainEle1Value2update[1], SelectPlanUpdate);
+
+					WebElement PremiumAmountEle2 = getDriver().findElement(By.xpath("(//div[contains(@class,'amount')])[1]"));
+					String PremiumAmountEle2Value2 = PremiumAmountEle2.getText();
+					TestUtil.verifybgColor(PremiumAmountEle2, driver);
+					String[] PremiumAmountEle2Value2update = PremiumAmountEle2Value2.split("s.");
+					//  softassert.assertEquals(PremiumAmountEle2Value2update[1], InitialPremiumAmountValue1);
+
+					WebElement CurrentDateEle1 = getDriver().findElement(By.xpath("(//div[contains(@class,'payment-details-value')])[2]"));
+					String CurrentDateEle1Value = CurrentDateEle1.getText();
+					TestUtil.verifybgColor(CurrentDateEle1, driver);
+					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+					LocalDateTime now = LocalDateTime.now();
+					String CurrentDateEle2 = dtf.format(now);
+					softassert.assertEquals(CurrentDateEle1Value, CurrentDateEle2);
+					paymentpage.Nextbutton();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+
+				} else if (testData.get("selectChequeORDemandDraft").equalsIgnoreCase("Demand Draft")) {
+					wait.WaitTime2();
+					paymentpage.ClickDDBTNweb();
+					wait.WaitTime2();
+					paymentpage.UploadChequeAndDDImgweb();
+					wait.WaitTime2();
+					//TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
+					paymentpage.EnterChequeDDNoWeb(testData.get("ChequeDDNo"));
+					wait.WaitTime2();
+					paymentpage.EnterDDMMYYONCDDWeb(testData.get("CDDday"), testData.get("CDDMonth"), testData.get("CDDYear"));
+					paymentpage.EnterIFSCCodeOnCDDWeb(testData.get("CDDIFSCcode"));
+					wait.WaitTime2();
+					//TestUtil.scrollToElement(driver, WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//span[text()='Submit'])[1]")));
+					paymentpage.UploadDECLARATIONFORMImgWEB();
+					wait.WaitTime2();
+					paymentpage.ClickCDDPaymentSubmitBTNweb();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					TestUtil.scrollTillTOPOfPage(getDriver());
+					wait.WaitTime2();
+					paymentpage.Nextbutton();
+					dashboard.checkLoaderWeb();
+					wait.WaitTime2();
+					wait.WaitTime2();
+				}
+			}
+
+			if (testData.get("PaymentType").equalsIgnoreCase("cash")) {
+
+				if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
+
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackModeweb();
+					wait.WaitTime2();
+					for(int j=0;j<=0;j++) {
+						TestUtil.scrollTillEndOfPage(driver);
+						paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
+						wait.WaitTime2();
+						paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
+						wait.WaitTime2();
+						if(j==0) {
+							paymentpage.ClickOnWinBackSaveBTNweb();
+							wait.WaitTime2();
+						}
+					}
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackREDEEMBTNweb();
+					wait.WaitTime2();
+					TestUtil.scrollTillTOPOfPage(driver);
+
+				}
+
+				paymentpage.ClickOnCashModeweb();
+
+				Thread.sleep(2000);
+				TestUtil.scrollTillEndOfPage(driver);
+				Thread.sleep(2000);
+
+				paymentpage.ClickOnCashSubmitBTNweb();
+				Thread.sleep(5000);
+
+				WebElement PlainEle1 =getDriver()
+						.findElement(By.xpath("(//div[contains(@class,'upper-case text-style-1')])[1]"));
+				String PlainEle1Value2 = PlainEle1.getText();
+				TestUtil.verifybgColor(PlainEle1, driver);
+				String[] PlainEle1Value2update = PlainEle1Value2.split(":");
+				softassert.assertEquals(PlainEle1Value2update[1], testData.get("PlanSelectionJourney"));
+
+				WebElement PremiumAmountEle2 = getDriver()
+						.findElement(By.xpath("(//div[contains(@class,'amount')])[1]"));
+				String PremiumAmountEle2Value2 = PremiumAmountEle2.getText();
+				TestUtil.verifybgColor(PremiumAmountEle2, driver);
+				String[] PremiumAmountEle2Value2update = PremiumAmountEle2Value2.split("s.");
+				// softassert.assertEquals(PremiumAmountEle2Value2update[1], InitialPremiumAmountValue1);
+
+				WebElement CurrentDateEle1 = getDriver().findElement(By.xpath("(//div[contains(@class,'payment-details-value')])[2]"));
+				String CurrentDateEle1Value = CurrentDateEle1.getText();
+				TestUtil.verifybgColor(CurrentDateEle1, driver);
+				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+				LocalDateTime now = LocalDateTime.now();
+				String CurrentDateEle2 = dtf.format(now);
+				softassert.assertEquals(CurrentDateEle1Value, CurrentDateEle2);
+
+				paymentpage.Nextbutton();
+				Thread.sleep(4000);
+			}
+			if (testData.get("ChannelName").equalsIgnoreCase("DCB")) {
+
+				if (testData.get("PaymentType").equalsIgnoreCase("OTC_DCB")) {
+
+					if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
+
+						TestUtil.scrollTillEndOfPage(driver);
+						paymentpage.ClickOnWinBackModeweb();
+						wait.WaitTime2();
+						for (int j = 0; j <= 0; j++) {
+							TestUtil.scrollTillEndOfPage(driver);
+							paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
+							wait.WaitTime2();
+							paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
+							wait.WaitTime2();
+							if (j == 0) {
+								paymentpage.ClickOnWinBackSaveBTNweb();
 								wait.WaitTime2();
-								paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
-								wait.WaitTime2();
-								if (j == 0) {
-									paymentpage.ClickOnWinBackSaveBTNweb();
-									wait.WaitTime2();
-								}
 							}
-							TestUtil.scrollTillEndOfPage(driver);
-							paymentpage.ClickOnWinBackREDEEMBTNweb();
-							wait.WaitTime2();
-							TestUtil.scrollTillTOPOfPage(driver);
-
 						}
 						TestUtil.scrollTillEndOfPage(driver);
-						paymentpage.ClickOnOTCModeDCB();
+						paymentpage.ClickOnWinBackREDEEMBTNweb();
+						wait.WaitTime2();
+						TestUtil.scrollTillTOPOfPage(driver);
 
-						Thread.sleep(2000);
-						TestUtil.scrollTillEndOfPage(driver);
-						Thread.sleep(2000);
-
-						paymentpage.ClickOnOTCSubmitBTNDCB();
-						Thread.sleep(5000);
-						paymentpage.ClickOnOTCSubmitBTNDCB();//this is issue
-						paymentpage.NEXTbutton();
-						Thread.sleep(4000);
-						paymentpage.NEXTbutton();//THIS IS ISSUE
 					}
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnOTCModeDCB();
+
+					Thread.sleep(2000);
+					TestUtil.scrollTillEndOfPage(driver);
+					Thread.sleep(2000);
+
+					paymentpage.ClickOnOTCSubmitBTNDCB();
+					Thread.sleep(5000);
+					paymentpage.ClickOnOTCSubmitBTNDCB();//this is issue
+					paymentpage.NEXTbutton();
+					Thread.sleep(4000);
+					paymentpage.NEXTbutton();//THIS IS ISSUE
 				}
-	            if (testData.get("PaymentType").equalsIgnoreCase("OTC")) {
+			}
+			if (testData.get("PaymentType").equalsIgnoreCase("OTC")) {
 
-	            	 if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
-		                	
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackModeweb();
-		                    wait.WaitTime2();
-		                    for(int j=0;j<=1;j++) {
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
-		                    wait.WaitTime2();
-		                    paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
-		                    wait.WaitTime2();
-		                	if(j==0) {
-		                    paymentpage.ClickOnWinBackSaveBTNweb();
-		                    wait.WaitTime2();
-		                	}
-		                	}
-		                    TestUtil.scrollTillEndOfPage(driver);
-		                    paymentpage.ClickOnWinBackREDEEMBTNweb();
-		                    wait.WaitTime2();
-		                    TestUtil.scrollTillTOPOfPage(driver);
+				if (testData.get("IsSelectWinBackPayment").equalsIgnoreCase("YES")) {
 
-		                }
-	                TestUtil.scrollTillEndOfPage(driver);
-	                paymentpage.ClickOnOTCModeweb();
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackModeweb();
+					wait.WaitTime2();
+					for(int j=0;j<=1;j++) {
+						TestUtil.scrollTillEndOfPage(driver);
+						paymentpage.EnterPolicyNOOnWinBackWeb(testData.get("WBplicyNo"));
+						wait.WaitTime2();
+						paymentpage.EnterAmountOnWinBackWeb(testData.get("Wbamount"));
+						wait.WaitTime2();
+						if(j==0) {
+							paymentpage.ClickOnWinBackSaveBTNweb();
+							wait.WaitTime2();
+						}
+					}
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.ClickOnWinBackREDEEMBTNweb();
+					wait.WaitTime2();
+					TestUtil.scrollTillTOPOfPage(driver);
 
-	                Thread.sleep(2000);
-	                TestUtil.scrollTillEndOfPage(driver);
-	                Thread.sleep(2000);
+				}
+				TestUtil.scrollTillEndOfPage(driver);
+				paymentpage.ClickOnOTCModeweb();
 
-	                paymentpage.ClickOnOTCSubmitBTNweb();
-	                Thread.sleep(5000);
+				Thread.sleep(2000);
+				TestUtil.scrollTillEndOfPage(driver);
+				Thread.sleep(2000);
 
-	                paymentpage.Nextbutton();
-	                Thread.sleep(4000);
-	            }
-				
+				paymentpage.ClickOnOTCSubmitBTNweb();
+				Thread.sleep(5000);
 
-	            if(testData.get("ChannelName").equalsIgnoreCase("DBS")) {
-	            	
-	        	if (testData.get("PaymentType").equalsIgnoreCase("RTGS")) {
+				paymentpage.Nextbutton();
+				Thread.sleep(4000);
+			}
 
-	    			paymentpage.ClickOnRTGSModeweb();
 
-	    			TestUtil.scrollTillEndOfPage(driver);
-	    			paymentpage.clickOnRTGSCheckboxWeb();
-	    		    paymentpage.clickOnRTGSpaymentSubmitBTNWeb();
-	    			getDriver().navigate().refresh();
-	    			Thread.sleep(5000);
+			if(testData.get("ChannelName").equalsIgnoreCase("DBS")) {
 
-	    			customerprofile.cdnextbutton(); // customer details NEXT button(QA)
-	    			dashboard.checkLoaderWeb();
-	    			Thread.sleep(4000);
+				if (testData.get("PaymentType").equalsIgnoreCase("RTGS")) {
 
-	    		}
-	            }
-	            
-	            
-	        } else {
-	            paymentpage.ClickDoItLatterOnPaymentweb();
-	        }
+					paymentpage.ClickOnRTGSModeweb();
+
+					TestUtil.scrollTillEndOfPage(driver);
+					paymentpage.clickOnRTGSCheckboxWeb();
+					paymentpage.clickOnRTGSpaymentSubmitBTNWeb();
+					getDriver().navigate().refresh();
+					Thread.sleep(5000);
+					try {
+						TestUtil.scrollTillEndOfPage(driver);
+						paymentpage.clickOnRTGSCheckboxWeb();
+						paymentpage.clickOnRTGSpaymentSubmitBTNWeb();
+					} catch (Exception e) {
+
+					}
+					customerprofile.cdnextbutton(); // customer details NEXT button(QA)
+					dashboard.checkLoaderWeb();
+					Thread.sleep(4000);
+
+				}
+			}
+
+
+		} else {
+			TestUtil.scrollTillEndOfPage(driver);
+			paymentpage.ClickDoItLatterOnPaymentweb();
+			getDriver().navigate().refresh();
+			Thread.sleep(5000);
+			try {
+			}catch(Exception e) {
+				paymentpage.ClickDoItLatterOnPaymentweb();
+			}
+		}
 	}
 }
